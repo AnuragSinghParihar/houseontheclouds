@@ -1,6 +1,5 @@
 import React from 'react';
 import './Landing.css';
-import Backvideo from "../assets/back.mp4"
 
 
 const Landing = () => {
@@ -14,7 +13,7 @@ const Landing = () => {
           loop
           
         >
-          <source src={Backvideo} type="video/mp4" />
+          <source src="https://cdn.back.mp4" type="video/mp4"  />
           Your browser does not support the video tag.
         </video>
 

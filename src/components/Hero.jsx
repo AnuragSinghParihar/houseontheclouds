@@ -1,6 +1,5 @@
 import React from 'react'
 import './Hero.css'
-import HotelVideo from '../assets/hotelvideo.mp4'
 import WeatherIcon from '../assets/season.png'
 import AltitudeIcon from '../assets/mountain (1).png'
 import GettingIcon from '../assets/map.png'
@@ -39,7 +38,7 @@ const Hero = () => {
                 loop
                 
                 >
-                <source src={HotelVideo} type="video/mp4" />
+                <source src="https://cdn.hotelvideo.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
             </div> 
