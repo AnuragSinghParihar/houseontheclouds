@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    
+    color: #fceee5;
+  }
+  
+  .landing-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .logo-header .logo {
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .main-title {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+  }
+  
+  .location {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .tagline {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6;
+  }
+  
+  .main-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 2rem;
+    border-top: 1px solid #5f1b1b;
+  }
+  
+  .left, .center, .right {
+    width: 30%;
+    text-align: left;
+  }
+  
+  .book-btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem;
+    background-color: #b62020;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .footer {
+    padding: 2rem;
+    border-top: 1px solid #5f1b1b;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+  }
+  
+  .footer-links a {
+    margin-left: 1rem;
+    text-decoration: none;
+    color: #fceee5;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  

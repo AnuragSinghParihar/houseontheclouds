@@ -1,0 +1,54 @@
+.room-showcase {
+    background-color: #f7f0e6;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .showcase-text h1 {
+    font-size: 3.5rem;
+    color: #b62222;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  
+  .showcase-text h1 i {
+    font-style: italic;
+    display: inline-block;
+    margin-top: 0.3rem;
+  }
+  
+  .subtext {
+    font-size: 0.9rem;
+    color: #a33737;
+    margin-top: 1rem;
+    max-width: 300px;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .image-block {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-block img {
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .main-image {
+    width: 600px;
+  }
+  
+  .sub-image {
+    width: 300px;
+    align-self: flex-start;
+  }
+  
