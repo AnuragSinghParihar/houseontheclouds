@@ -22,7 +22,7 @@
   
   .hotc-text h2 {
     font-size: 36px;
-    color: #14663f;
+    color: #b61f1f;
     font-weight: 700;
     margin-bottom: 20px;
     animation: slideInLeft 1s ease;
@@ -37,7 +37,7 @@
   }
   
   .hotc-btn {
-    background-color: #14663f;
+    background-color: #b61f1f;
     color: #fff;
     padding: 12px 28px;
     border-radius: 28px;

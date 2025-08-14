@@ -1,7 +1,7 @@
 import React from 'react';
 import './RoomShowcase.css';
-// import roomImg1 from '../assets/room1.jpg';
-// import roomImg2 from '../assets/room2.jpg';
+import roomImg1 from '../assets/roomone.jpg';
+import roomImg2 from '../assets/roomtwo.jpg';
 
 const RoomShowcase = () => {
   return (
@@ -18,8 +18,9 @@ const RoomShowcase = () => {
       </div>
 
       <div className="image-block">
-        <img src='' alt="fireplace room" className="main-image" />
-        <img src='' alt="warm room" className="sub-image" />
+      <img src={roomImg1} alt="warm room" className="sub-image" />
+        <img src={roomImg2} alt="fireplace room" className="main-image"  />
+        
       </div>
     </section>
   );

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Hero.css'
+import HotelVideo from '../assets/hotelvideo.mp4'
 import WeatherIcon from '../assets/season.png'
 import AltitudeIcon from '../assets/mountain (1).png'
 import GettingIcon from '../assets/map.png'
@@ -38,7 +39,7 @@ const Hero = () => {
                 loop
                 
                 >
-                <source src="https://cdn.hotelvideo.mp4" type="video/mp4" />
+                <source src={HotelVideo} type="video/mp4" />
                 Your browser does not support the video tag.
                 </video>
             </div> 
@@ -54,12 +55,14 @@ const Hero = () => {
     <a href="#" className={unit === 'F' ? 'active' : ''} onClick={(e) => {
       e.preventDefault();
       handleClick('F');}}>| Fahrenheit</a>
+    <div className="grid-info">Pleasant summers, snowy winters.</div>
   </div>
 
   <div className='grid-items'>
     <img src={AltitudeIcon} alt="Altitude" width="60" height="60" className='icon-of-grid' />
     <h4>Altitude</h4>
     <h6>13,615 ft</h6>
+    <div className="grid-info">One of the highest villages in Asia.</div>
   </div>
 
   <div className='grid-items'>
@@ -67,15 +70,16 @@ const Hero = () => {
     <h4>Getting there</h4>
     <h6>22 km</h6>
     <p>from Kaza | <a href="#">view Google Maps</a></p>
+    <div className="grid-info">Accessible by road, scenic drive.</div>
   </div>
 
   <div className='grid-items'>
     <img src={AccomodationIcon} alt="Accomodation" width="60" height="60" className='icon-of-grid' />
     <h4>Accomodation</h4>
     <h6>7 Rooms</h6>
+    <div className="grid-info">Cozy, mountain-view rooms.</div>
   </div>
 </div>
-
 
             
         

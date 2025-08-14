@@ -1,6 +1,6 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import './Landing.css';
-
+import Backvideo from "../assets/back.mp4"
 
 const Landing = () => {
   return (
@@ -13,17 +13,17 @@ const Landing = () => {
           loop
           
         >
-          <source src="https://cdn.back.mp4" type="video/mp4"  />
+          <source src={Backvideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
         <nav>
           <section className="navbar">
             <div className="navbar-left">
-              <a href="#about">About</a>
-              <a href="#stay">Stay</a>
-              <a href="#dine">Dine</a>
-              <a href="#gallery">Gallery</a>
+              <Link to="/about" className="link-btn">About</Link>
+              <Link to="/stay">Stay</Link>
+              <Link to="/dine">Dine</Link>
+              
               <a href="#contact">Contact</a>
             </div>
 
@@ -34,15 +34,15 @@ const Landing = () => {
             </div>
 
             <div className="navbar-right">
-              <button className="book-btn">Book Here</button>
+              <Link to="/booking" className="book-btn">Book Here</Link>
             </div>
           </section>
         </nav>
 
         <div className='writting'>
           <h6 className='heading-one'>SPITI VALLEY</h6>
-          <h2 className='heading-two'>Wake Up to White Peaks<br/><i>Stay in Spiti</i></h2>
-          <h1 className='heading-three'><i>House on the Clouds</i></h1>
+          <h2 className='heading-two'>A place to pause, breathe, and belong</h2>
+          <h1 className='heading-three'>House on the Clouds</h1>
         </div>
       </div>
 

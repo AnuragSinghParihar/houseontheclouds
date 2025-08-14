@@ -1,0 +1,633 @@
+.dine-video-bg {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dine-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.dine-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(40, 0, 0, 0.35);
+  z-index: 2;
+}
+
+.dine-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+
+.dine-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 5vw;
+  font-weight: 700;
+  margin: 0 0 1vw 0;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+
+.dine-title-italic {
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+}
+
+.dine-subtitle {
+  margin-top: 2vw;
+  font-size: 1.2vw;
+  letter-spacing: 0.3em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: #fff0f0;
+  opacity: 0.85;
+}
+
+.dine-desc {
+  margin-top: 1vw;
+  font-size: 2vw;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.18);
+}
+
+.dine-desc-italic {
+  font-style: italic;
+}
+
+.dine-book-btn {
+  position: absolute;
+  top: 2vw;
+  right: 2vw;
+  background: #a1001c;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2vw;
+  padding: 0.8vw 2vw;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 4;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  transition: background 0.2s;
+}
+.dine-book-btn:hover {
+  background: #d1002c;
+}
+
+@media (max-width: 900px) {
+  .dine-title {
+    font-size: 8vw;
+  }
+  .dine-desc {
+    font-size: 4vw;
+  }
+  .dine-book-btn {
+    font-size: 2.5vw;
+    padding: 1vw 4vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .dine-title {
+    font-size: 11vw;
+  }
+  .dine-desc {
+    font-size: 6vw;
+  }
+  .dine-book-btn {
+    font-size: 4vw;
+    padding: 2vw 6vw;
+    top: 4vw;
+    right: 4vw;
+  }
+  .dine-subtitle {
+    font-size: 3vw;
+  }
+}
+
+/* Bar & Living Room Section */
+.bar-living-section {
+  background: #f5efe6;
+  text-align: center;
+  padding: 7vw 0 6vw 0;
+  width: 100vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar-living-top-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1vw;
+  color: #7a4a3a;
+  letter-spacing: 0.08em;
+  margin-bottom: 2vw;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.bar-living-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 6vw;
+  color: #b61f1f;
+  font-weight: 700;
+  margin: 0 0 1.5vw 0;
+  line-height: 1.05;
+}
+
+.bar-living-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: 2vw;
+  color: #b61f1f;
+  margin-bottom: 2vw;
+  font-weight: 400;
+}
+
+.bar-living-highlight {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.bar-living-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1vw;
+  color: #b61f1f;
+  letter-spacing: 0.3em;
+  margin-top: 2vw;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .bar-living-title {
+    font-size: 10vw;
+  }
+  .bar-living-subtitle {
+    font-size: 4vw;
+  }
+  .bar-living-top-text, .bar-living-label {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .bar-living-title {
+    font-size: 13vw;
+  }
+  .bar-living-subtitle {
+    font-size: 6vw;
+  }
+  .bar-living-top-text, .bar-living-label {
+    font-size: 3vw;
+  }
+}
+
+/* Bar & Living Room Detail Section */
+.bar-detail-section {
+  background: #f5efe6;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 7vw 0;
+}
+
+.bar-detail-container {
+  display: flex;
+  gap: 4vw;
+  max-width: 1400px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 3vw;
+}
+
+.bar-detail-image {
+  flex: 1.2;
+  min-width: 340px;
+  max-width: 60vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.bar-detail-image img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  object-fit: cover;
+}
+
+.bar-detail-content {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 1vw;
+}
+
+.bar-detail-cocktail {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 10px;
+  margin-bottom: 2vw;
+  margin-top: 0.5vw;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.10);
+  object-fit: cover;
+  display: block;
+  align-self: flex-start;
+}
+
+.bar-detail-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7vw;
+  color: #b61f1f;
+  font-weight: 700;
+  margin-bottom: 1.2vw;
+  line-height: 1.2;
+}
+
+.bar-detail-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1vw;
+  color: #7a4a3a;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.bar-detail-bartender {
+  width: 100%;
+  max-width: 440px;
+  border-radius: 14px;
+  margin-bottom: 1.2vw;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+  object-fit: cover;
+  display: block;
+  align-self: flex-start;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.fade-in-left {
+  opacity: 0;
+  animation: fadeInLeft 1.1s cubic-bezier(.4,2,.6,1) 0.1s both;
+}
+.fade-in-right {
+  opacity: 0;
+  animation: fadeInRight 1.1s cubic-bezier(.4,2,.6,1) 0.3s both;
+}
+
+@media (max-width: 1100px) {
+  .bar-detail-heading { font-size: 2.5vw; }
+  .bar-detail-desc { font-size: 1.7vw; }
+}
+@media (max-width: 900px) {
+  .bar-detail-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5vw;
+  }
+  .bar-detail-image, .bar-detail-content {
+    max-width: 95vw;
+    min-width: 0;
+  }
+  .bar-detail-heading { font-size: 3.5vw; }
+  .bar-detail-desc { font-size: 2.5vw; }
+  .bar-detail-bartender {
+    max-width: 95vw;
+    margin-bottom: 3vw;
+    align-self: center;
+  }
+  .bar-detail-cocktail {
+    max-width: 80vw;
+    margin-bottom: 4vw;
+    align-self: center;
+  }
+  .bar-detail-content {
+    align-items: center;
+  }
+}
+@media (max-width: 600px) {
+  .bar-detail-section { padding-bottom: 12vw; }
+  .bar-detail-heading { font-size: 5vw; }
+  .bar-detail-desc { font-size: 3.5vw; }
+  .bar-detail-bartender {
+    max-width: 98vw;
+    margin-bottom: 4vw;
+  }
+  .bar-detail-cocktail {
+    max-width: 95vw;
+    margin-bottom: 5vw;
+  }
+}
+
+.dham-section {
+  position: relative;
+  width: 100vw;
+  min-height: 55vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.dham-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 10, 10, 0.18);
+  z-index: 1;
+}
+
+.dham-title {
+  position: relative;
+  z-index: 2;
+  font-family: 'Playfair Display', cursive, serif;
+  font-size: 7vw;
+  color: #fff;
+  font-weight: 400;
+  margin: 0 0 3vw 2vw;
+  text-shadow: 0 6px 32px rgba(0,0,0,0.25);
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 1.2s cubic-bezier(.4,2,.6,1) 0.2s both;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+  .dham-title {
+    font-size: 12vw;
+    margin-left: 4vw;
+    margin-bottom: 5vw;
+  }
+  .dham-section {
+    min-height: 35vh;
+  }
+}
+@media (max-width: 600px) {
+  .dham-title {
+    font-size: 16vw;
+    margin-left: 5vw;
+    margin-bottom: 7vw;
+  }
+  .dham-section {
+    min-height: 28vh;
+  }
+}
+
+.culinary-section {
+  background: #f5efe6;
+  width: 100vw;
+  padding: 5vw 0 5vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.culinary-container {
+  display: flex;
+  gap: 4vw;
+  max-width: 1400px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 3vw;
+}
+
+.culinary-left {
+  flex: 1.5;
+  min-width: 320px;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.culinary-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  color: #b61f1f;
+  font-weight: 700;
+  margin-bottom: 2vw;
+  line-height: 1.1;
+}
+
+.culinary-lead {
+  font-family: 'Montserrat', serif;
+  font-size: 1.3vw;
+  color: #b61f1f;
+  font-weight: 500;
+  margin-bottom: 1.2vw;
+  line-height: 1.5;
+}
+
+.culinary-desc {
+  font-family: 'Montserrat', serif;
+  font-size: 1.1vw;
+  color: #7a4a3a;
+  margin-bottom: 1vw;
+  line-height: 1.7;
+}
+
+.culinary-right {
+  flex: 1;
+  min-width: 220px;
+  max-width: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin-top: 1vw;
+}
+
+.culinary-illustration {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(0.2) contrast(1.1) brightness(0.95) sepia(0.3) hue-rotate(-10deg) saturate(2.5);
+}
+
+@media (max-width: 900px) {
+  .culinary-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 3vw;
+  }
+  .culinary-left, .culinary-right {
+    max-width: 95vw;
+    min-width: 0;
+    align-items: center;
+  }
+  .culinary-title {
+    font-size: 5vw;
+    text-align: center;
+  }
+  .culinary-lead, .culinary-desc {
+    font-size: 2.5vw;
+    text-align: center;
+  }
+  .culinary-illustration {
+    max-width: 60vw;
+    margin-top: 2vw;
+  }
+}
+@media (max-width: 600px) {
+  .culinary-title {
+    font-size: 7vw;
+  }
+  .culinary-lead, .culinary-desc {
+    font-size: 4vw;
+  }
+  .culinary-illustration {
+    max-width: 90vw;
+  }
+}
+
+.dine-slogan-section {
+  width: 100vw;
+  background: #f5efe6;
+  padding: 2.5vw 0 1vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dine-slogan-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2vw;
+  color: #b61f1f;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+}
+
+.livingroom-section {
+  background: #f5efe6;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vw 0 4vw 0;
+}
+.livingroom-container {
+  display: flex;
+  gap: 4vw;
+  max-width: 1400px;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 3vw;
+}
+.livingroom-image {
+  flex: 1.2;
+  min-width: 340px;
+  max-width: 60vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.livingroom-image img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  object-fit: cover;
+}
+.livingroom-content {
+  flex: 1;
+  min-width: 320px;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 1vw;
+}
+.livingroom-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3vw;
+  color: #b61f1f;
+  font-weight: 700;
+  margin-bottom: 1vw;
+  line-height: 1.1;
+}
+.livingroom-subtitle {
+  font-family: 'Montserrat', serif;
+  font-size: 1.5vw;
+  color: #b61f1f;
+  font-weight: 500;
+  margin-bottom: 1.2vw;
+  line-height: 1.4;
+}
+.livingroom-desc {
+  font-family: 'Montserrat', serif;
+  font-size: 1.1vw;
+  color: #7a4a3a;
+  margin-bottom: 1vw;
+  line-height: 1.7;
+}
+@media (max-width: 900px) {
+  .dine-slogan-text { font-size: 4vw; }
+  .livingroom-container { flex-direction: column; align-items: center; gap: 2.5vw; }
+  .livingroom-image, .livingroom-content { max-width: 95vw; min-width: 0; }
+  .livingroom-title { font-size: 5vw; }
+  .livingroom-subtitle { font-size: 2.5vw; }
+  .livingroom-desc { font-size: 2.5vw; }
+}
+@media (max-width: 600px) {
+  .dine-slogan-text { font-size: 6vw; }
+  .livingroom-title { font-size: 7vw; }
+  .livingroom-subtitle { font-size: 4vw; }
+  .livingroom-desc { font-size: 4vw; }
+} 

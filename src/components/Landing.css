@@ -9,9 +9,10 @@ body, html {
   padding: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background: none;
 }
 
-/* NAVBAR */
+
 .navbar {
   display: flex;
   justify-content: center;
@@ -30,6 +31,14 @@ body, html {
   z-index: 1000;
   font-family: 'Playfair Display', serif;
   animation: slideDown 1s ease-in-out;
+}
+.link-btn {
+  background: none;
+  border: none;
+  
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
 }
 
 .navbar-left,
@@ -92,7 +101,7 @@ body, html {
   transform: scale(1.1);
 }
 
-/* VIDEO */
+
 .bg-video {
   position: relative;
   top: -32px;
@@ -105,7 +114,7 @@ body, html {
   animation: videoFadeIn 1.5s ease;
 }
 
-/* TEXT SECTION */
+
 .writting {
   position: absolute;
   top: 74%;
@@ -123,7 +132,7 @@ body, html {
   letter-spacing: 9px;
   padding-bottom: 0;
   margin-bottom: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Recoleta', serif;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 0.3s;
 }
@@ -134,18 +143,18 @@ body, html {
   margin-top: 5px;
   margin-bottom: 0;
   padding-bottom: 0;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Recoleta', serif;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 0.8s;
 }
 
 .heading-three {
-  font-size: 85px;
+  font-size: 70px;
   padding-bottom: 0;
   padding-top: 0;
   margin-bottom: 0;
   margin-top: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Playfair Display', serif;
   font-weight: bold;
   opacity: 0;
   animation: fadeInUp 1s ease forwards 1.3s;

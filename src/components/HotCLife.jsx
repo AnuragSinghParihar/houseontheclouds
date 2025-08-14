@@ -1,5 +1,6 @@
 import React from 'react';
 import './HotCLife.css';
+import Query from './Query';
 
 const HotCLife = () => {
   return (
