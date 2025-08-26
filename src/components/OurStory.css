@@ -1,0 +1,813 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Global reset for about page */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Video Background Styles */
+.ourstory-video-bg {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.ourstory-bg-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.ourstory-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ourstory-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 3;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ourstory-title {
+  font-size: 4rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.ourstory-subtitle {
+  font-size: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+}
+
+.ourstory-heritage {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+/* Mud Painting Showcase Section */
+.mud-painting-showcase {
+  background: #f7f0e6;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.mud-painting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mud-painting-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.mud-painting-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: 60% 40%;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.mud-painting-image:hover {
+  transform: scale(1.02);
+}
+
+.mud-painting-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.mud-painting-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.mud-painting-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main Content Section */
+.about-main-section {
+  background: #f7f0e6;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Intro Section */
+.about-intro {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.about-intro-text {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Section Styles */
+.about-section {
+  margin-bottom: 5rem;
+}
+
+.about-section-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.about-section.reverse .about-section-content {
+  flex-direction: row-reverse;
+}
+
+.about-section-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-section-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.about-section-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-section-image {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-section-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.about-section-image img:hover {
+  transform: scale(1.02);
+}
+
+.about-section-images {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.about-section-images img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-section-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Special Section */
+.about-special-section {
+  background: linear-gradient(135deg, #b62222 0%, #8B4513 100%);
+  color: white;
+  padding: 4rem 0;
+  margin: 4rem 0;
+  border-radius: 20px;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  box-sizing: border-box;
+}
+
+.about-special-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-special-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.about-special-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 3rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-special-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-special-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Welcome Section */
+.welcome-showcase {
+  background: #ffffff;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.welcome-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.welcome-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.welcome-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.welcome-image:hover {
+  transform: scale(1.02);
+}
+
+.welcome-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.welcome-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.welcome-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Night View Section */
+.night-view-showcase {
+  background: #f7f0e6;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.night-view-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.night-view-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.night-view-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.night-view-image:hover {
+  transform: scale(1.02);
+}
+
+.night-view-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.night-view-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.night-view-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Gathering Section */
+.gathering-showcase {
+  background: #ffffff;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.gathering-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.gathering-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.gathering-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.gathering-image:hover {
+  transform: scale(1.02);
+}
+
+.gathering-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.gathering-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.gathering-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Cultural Section */
+.cultural-showcase {
+  background: #f7f0e6;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.cultural-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cultural-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.cultural-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cultural-image:hover {
+  transform: scale(1.02);
+}
+
+.cultural-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.cultural-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.cultural-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Living Room Section */
+.living-room-showcase {
+  background: #ffffff;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.living-room-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.living-room-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.living-room-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.living-room-image:hover {
+  transform: scale(1.02);
+}
+
+.living-room-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.living-room-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.living-room-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Owner Section */
+.owner-showcase {
+  background: #f7f0e6;
+  padding: 4rem 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.owner-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.owner-image-section {
+  flex: 0 0 45%;
+  min-width: 0;
+}
+
+.owner-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.owner-image:hover {
+  transform: scale(1.02);
+}
+
+.owner-text-section {
+  flex: 1;
+  min-width: 0;
+}
+
+.owner-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.owner-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .mud-painting-container,
+  .welcome-container,
+  .night-view-container,
+  .gathering-container,
+  .cultural-container,
+  .living-room-container,
+  .owner-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .mud-painting-image-section,
+  .welcome-image-section,
+  .night-view-image-section,
+  .gathering-image-section,
+  .cultural-image-section,
+  .living-room-image-section,
+  .owner-image-section {
+    flex: none;
+    width: 100%;
+  }
+  
+  .mud-painting-title,
+  .welcome-title,
+  .night-view-title,
+  .gathering-title,
+  .cultural-title,
+  .living-room-title,
+  .owner-title {
+    font-size: 2.5rem;
+  }
+  
+  .mud-painting-description,
+  .welcome-description,
+  .night-view-description,
+  .gathering-description,
+  .cultural-description,
+  .living-room-description,
+  .owner-description {
+    font-size: 1.1rem;
+  }
+  
+  .about-section-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-section.reverse .about-section-content {
+    flex-direction: column;
+  }
+  
+  .about-section-title {
+    font-size: 2rem;
+  }
+  
+  .about-special-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mud-painting-container,
+  .welcome-container,
+  .night-view-container,
+  .gathering-container,
+  .cultural-container,
+  .living-room-container,
+  .owner-container {
+    padding: 0 1rem;
+  }
+  
+  .mud-painting-image,
+  .welcome-image,
+  .night-view-image,
+  .gathering-image,
+  .cultural-image,
+  .living-room-image,
+  .owner-image {
+    height: 300px;
+  }
+  
+  .mud-painting-title,
+  .welcome-title,
+  .night-view-title,
+  .gathering-title,
+  .cultural-title,
+  .living-room-title,
+  .owner-title {
+    font-size: 2rem;
+  }
+  
+  .mud-painting-description,
+  .welcome-description,
+  .night-view-description,
+  .gathering-description,
+  .cultural-description,
+  .living-room-description,
+  .owner-description {
+    font-size: 1rem;
+  }
+  
+  .ourstory-title {
+    font-size: 2.5rem;
+  }
+  
+  .ourstory-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .about-container {
+    padding: 0 1rem;
+  }
+  
+  .about-intro-text {
+    font-size: 1.1rem;
+  }
+  
+  .about-section-title {
+    font-size: 1.8rem;
+  }
+  
+  .about-section-description {
+    font-size: 1rem;
+  }
+  
+  .about-section-image img {
+    height: 300px;
+  }
+  
+  .about-section-images {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-section-images img {
+    height: 250px;
+  }
+  
+  .about-special-images {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-special-images img {
+    height: 250px;
+  }
+}

@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  background: none;
+}
+
+.landing-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 3rem;
+  background: transparent;
+  backdrop-filter: blur(0px);
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  z-index: 1000;
+  font-family: 'Playfair Display', serif;
+  animation: slideDown 1s ease-in-out;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: linear-gradient(135deg, #4a1818 0%, #3a1414 100%) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(182, 31, 31, 0.3),
+    0 0 20px rgba(182, 31, 31, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+.navbar.scrolled::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(182, 31, 31, 0.1) 20%, 
+    rgba(182, 31, 31, 0.2) 50%, 
+    rgba(182, 31, 31, 0.1) 80%, 
+    transparent 100%);
+  pointer-events: none;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+.link-btn {
+  background: none;
+  border: none;
+  
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex: 1;
+}
+
+.navbar-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.navbar-left a {
+  text-decoration: none;
+  color: white !important;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.navbar-left a:hover {
+  color: #ffd700;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.navbar-left a.active {
+  color: white !important;
+  background: rgba(182, 34, 34, 0.3);
+  transform: translateY(-2px);
+}
+
+/* When gallery page is active, change all navbar links to white for better contrast */
+.navbar:has(a[href="/gallery"].active) .navbar-left a,
+.navbar:has(a[href="/gallery"].active) .book-btn {
+  color: white !important;
+}
+
+.navbar:has(a[href="/gallery"].active) .navbar-left a:hover,
+.navbar:has(a[href="/gallery"].active) .book-btn:hover {
+  color: #ffd700 !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* When contact page is active, change all navbar links to white for better contrast */
+.navbar:has(a[href="/contact"].active) .navbar-left a,
+.navbar:has(a[href="/contact"].active) .book-btn {
+  color: white !important;
+}
+
+.navbar:has(a[href="/contact"].active) .navbar-left a:hover,
+.navbar:has(a[href="/contact"].active) .book-btn:hover {
+  color: #ffd700 !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Force white text for gallery and contact pages even when not scrolled */
+body:has(.gallery-page) .navbar .navbar-left a,
+body:has(.gallery-page) .navbar .book-btn,
+body:has(.contact-page) .navbar .navbar-left a,
+body:has(.contact-page) .navbar .book-btn {
+  color: white !important;
+}
+
+body:has(.gallery-page) .navbar .navbar-left a:hover,
+body:has(.gallery-page) .navbar .book-btn:hover,
+body:has(.contact-page) .navbar .navbar-left a:hover,
+body:has(.contact-page) .navbar .book-btn:hover {
+  color: #ffd700 !important;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Permanent navbar background for gallery and contact pages */
+body:has(.gallery-page) .navbar,
+body:has(.contact-page) .navbar {
+  background: linear-gradient(135deg, #4a1818 0%, #3a1414 100%) !important;
+  backdrop-filter: blur(10px) !important;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(182, 31, 31, 0.3),
+    0 0 20px rgba(182, 31, 31, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
+}
+
+body:has(.gallery-page) .navbar::before,
+body:has(.contact-page) .navbar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, 
+    transparent 0%, 
+    rgba(182, 31, 31, 0.1) 20%, 
+    rgba(182, 31, 31, 0.2) 50%, 
+    rgba(182, 31, 31, 0.1) 80%, 
+    transparent 100%);
+  pointer-events: none;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* LOGO */
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.logo-box:hover {
+  transform: scale(1.05);
+}
+
+.logo-box img {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* BOOK BUTTON */
+.book-btn {
+  text-decoration: none;
+  color: white !important;
+  font-family: 'Georgia', serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #b62222 0%, #8b0000 100%) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(182, 34, 34, 0.3) !important;
+  margin: 0;
+  line-height: 1;
+  display: inline-block;
+}
+
+.book-btn:hover {
+  color: white !important;
+  background: linear-gradient(135deg, #8b0000 0%, #b62222 100%) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(182, 34, 34, 0.4) !important;
+}
+
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh + 100px);
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.75);
+  animation: videoFadeIn 1.5s ease;
+  margin: 0 0 10px 0;
+  padding: 0;
+}
+
+
+.writting {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: whitesmoke;
+  z-index: 1;
+  animation: fadeUpText 1.5s ease-in-out forwards;
+}
+
+/* HEADINGS */
+.heading-one {
+  font-size: 11px;
+  letter-spacing: 9px;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 20px;
+  font-family: 'Recoleta', serif;
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heading-two {
+  font-size: 25px;
+  padding-top: 0;
+  margin-top: 5px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: 'Recoleta', serif;
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.heading-three {
+  font-size: 70px;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  opacity: 1;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* KEYFRAMES */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.6;
+    transform: scaleX(1.02);
+  }
+}
+
+@keyframes videoFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpText {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+

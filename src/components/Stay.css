@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Image Section */
+.stay-hero-image {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../assets/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6));
+  z-index: 2;
+}
+
+/* Hero Slogan */
+.hero-slogan {
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+  width: 100%;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.hero-main-title {
+  font-size: 3.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 1px;
+  line-height: 1.1;
+  white-space: nowrap;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 0;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 1px;
+  opacity: 0.9;
+  animation: fadeInUp 1.5s ease-out 0.3s both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Content Section */
+.stay-content-section {
+  background: #ffffff;
+  padding: 0;
+  width: 100%;
+  margin-top: 0;
+  min-height: 100vh;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.content-text {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Amenities Section */
+.amenities-section {
+  padding: 4rem 0;
+  background: transparent;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.amenities-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.amenities-title {
+  font-size: 2.5rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.amenities-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.amenity-card {
+  background: transparent;
+  padding: 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: none;
+}
+
+.amenity-card:hover {
+  transform: scale(1.05);
+}
+
+.amenity-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f7f0e6, #e8d5c4);
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.amenity-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: brightness(0.8) saturate(1.2);
+}
+
+.amenity-title {
+  font-size: 1.3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  color: #b62222;
+  margin-bottom: 0.8rem;
+}
+
+.amenity-description {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive styles for amenities */
+@media (max-width: 768px) {
+  .amenities-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .amenity-card {
+    padding: 1.5rem;
+  }
+  
+  .amenity-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+  }
+  
+  .amenities-title {
+    font-size: 2rem;
+  }
+  
+  .amenities-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .amenities-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .amenity-card {
+    padding: 1.25rem;
+  }
+  
+  .amenities-title {
+    font-size: 1.8rem;
+  }
+}
+
+
+
+/* Image and Slogan Layout */
+.image-slogan-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 0;
+  position: relative;
+  z-index: 1;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-slogan-container:hover .left-image {
+  transform: translateX(-400px);
+}
+
+.image-slogan-container:hover .right-image {
+  transform: translateX(400px);
+}
+
+.left-image, .right-image {
+  flex: 0 0 500px;
+  height: 400px;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: none;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  margin: 0;
+}
+
+.left-image {
+  margin-left: 0;
+}
+
+.right-image {
+  margin-right: 0;
+  transform: none;
+}
+
+.left-image:hover {
+  transform: translateX(-400px);
+  box-shadow: none;
+}
+
+.right-image:hover {
+  transform: translateX(400px);
+  box-shadow: none;
+}
+
+.side-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: brightness(0.9) contrast(1.1);
+}
+
+.left-image:hover .side-image, .right-image:hover .side-image {
+  transform: scale(1.02);
+  filter: brightness(1) contrast(1.2);
+}
+
+.center-section {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  z-index: 2;
+  transition: opacity 0.4s ease;
+  opacity: 0;
+}
+
+.image-slogan-container:hover .center-section {
+  opacity: 1;
+}
+
+.stay-heading {
+  font-size: clamp(1.2rem, 2.5vw, 2rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  white-space: nowrap;
+  text-align: center;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(182, 34, 34, 0.1);
+  position: relative;
+}
+
+.stay-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #b62222, #8b0000);
+  border-radius: 2px;
+}
+
+/* Image Grid Section */
+.image-grid-section {
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow: none;
+  aspect-ratio: 1/1;
+  background: #ffffff;
+  min-height: 150px;
+}
+
+.grid-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stay-hero-image {
+    height: 80vh;
+  }
+  
+
+  
+  .stay-content-section {
+    padding: 0;
+  }
+  
+  .content-container {
+    padding: 0;
+  }
+  
+  .image-slogan-container {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 3rem;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+  }
+  
+  .left-image, .right-image {
+    flex: none;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+  }
+  
+  .center-section {
+    order: -1;
+    padding: 0 1rem;
+  }
+  
+  .stay-heading {
+    font-size: clamp(1rem, 3vw, 1.8rem);
+  }
+  
+  .image-grid-section {
+    margin-top: 3rem;
+    padding: 0 1rem;
+  }
+  
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 2px;
+    max-width: 800px;
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stay-hero-image {
+    height: 70vh;
+  }
+}
+
+/* Hotel Information Section */
+.hotel-info-section {
+  margin-top: 6rem;
+  padding: 4rem 0;
+  background: #f8f8f8;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+}
+
+.info-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.info-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #b62222;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.info-subtitle {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.info-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.accordion-item {
+  background: white;
+  border: 1px solid #e0e0e0;
+}
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background: white;
+}
+
+.accordion-header:hover {
+  background: #f9f9f9;
+}
+
+.accordion-number {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #b62222;
+  margin-right: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  min-width: 30px;
+}
+
+.accordion-title {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b62222;
+  transition: transform 0.3s ease;
+  min-width: 20px;
+  text-align: center;
+}
+
+.accordion-icon.active {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background: #fafafa;
+}
+
+.accordion-content.active {
+  max-height: 200px;
+  padding: 1.5rem 2rem;
+}
+
+.accordion-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Responsive Design for Hotel Info */
+@media (max-width: 768px) {
+  .hotel-info-section {
+    margin-top: 4rem;
+    padding: 3rem 0;
+  }
+  
+  .info-container {
+    padding: 0 1rem;
+  }
+  
+  .accordion-header {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .accordion-content.active {
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .accordion-number {
+    margin-right: 1rem;
+    min-width: 25px;
+  }
+  
+  .accordion-title {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hotel-info-section {
+    margin-top: 3rem;
+    padding: 2rem 0;
+  }
+  
+  .accordion-header {
+    padding: 1rem 1.2rem;
+  }
+  
+  .accordion-content.active {
+    padding: 1rem 1.2rem;
+  }
+  
+  .accordion-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Responsive styles for hero slogan */
+@media (max-width: 768px) {
+  .hero-main-title {
+    font-size: 3rem;
+    letter-spacing: 1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-slogan {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-main-title {
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+} 
