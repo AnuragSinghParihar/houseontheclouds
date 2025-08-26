@@ -2,17 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './HotCLife.css';
 
-
 const HotCLife = () => {
   return (
     <section className="hotc-section">
       <div className="hotc-container">
         <div className="hotc-text fade-in-left">
-          <h2>The House on the Clouds Life!</h2>
+          <h2>Ready to Experience Spiti?</h2>
           <p>
-          Discover the soul of Himachal with <strong>House on the Clouds</strong> — where every destination is a story waiting to be lived.
+            Let's start planning your perfect mountain retreat. Reach out and we'll help you create unforgettable memories in the heart of the Himalayas.
           </p>
-          <Link to="/contact" className="hotc-btn">Send A Query</Link>
+          <Link to="/contact" className="hotc-btn">Get In Touch</Link>
         </div>
 
         <div className="hotc-map fade-in-right">

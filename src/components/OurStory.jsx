@@ -1,65 +1,85 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './OurStory.css'
-import HotelVideo from '../assets/hotelvideo.mp4'
-// Using the mud painting image
-import MudPaintingImage from '../assets/mudpaint.JPG'
-import WelcomeImage from '../assets/IMG_0303.JPG'
 import NightViewImage from '../assets/IMG_0307.jpg'
 import GatheringImage from '../assets/IMG_0297.JPG'
-import CulturalImage from '../assets/IMG_0304.JPG'
-import LivingRoomImage from '../assets/IMG_0308.jpg'
 import OwnerImage from '../assets/IMG_0309.jpg'
+import Image1 from '../assets/IMG_9462.jpg'
+import Image2 from '../assets/IMG_9520.jpg'
+import Image3 from '../assets/IMG_9444.jpg'
+import SustainableVideo from '../assets/1755973836362340 2.MP4'
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 const OurStory = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const images = [Image1, Image2, Image3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <>
       <Navbar />
       
-      {/* Video Background Section */}
-      <div className="ourstory-video-bg">
-        <video className="ourstory-bg-video" autoPlay muted loop playsInline>
-          <source src={HotelVideo} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+      {/* Image Background Section */}
+      <div className="ourstory-image-bg">
+        <div className="image-slider">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={image}
+              alt={`Background ${index + 1}`}
+              className={`slider-image ${index === currentImageIndex ? 'active' : ''}`}
+            />
+          ))}
+        </div>
         <div className="ourstory-overlay" />
         <div className="ourstory-content">
           <h1 className="ourstory-title">Our Story</h1>
-          <div className="ourstory-subtitle">More Than a Hotel,<br /><span className="ourstory-heritage">a Heritage of Hospitality</span></div>
         </div>
       </div>
 
-      {/* Mud Painting Showcase Section */}
-      <div className="mud-painting-showcase">
-        <div className="mud-painting-container">
-          <div className="mud-painting-image-section">
-            <img src={MudPaintingImage} alt="Traditional Himachali Mud Painting" className="mud-painting-image" />
-          </div>
-          <div className="mud-painting-text-section">
-            <h2 className="mud-painting-title">Mud Painting – A Traditional Himachali Craft</h2>
-            <p className="mud-painting-description">
-              This wall showcases the beauty of traditional mud painting, a time-honored art form from Himachal Pradesh. Created using layers of natural earth pigments, each stripe reflects the raw tones of local soils and minerals – from deep reds and browns to lighter creams and greys.
-              <br /><br />
-              Mud painting is not just decorative but also deeply sustainable, blending seamlessly with the environment. It helps regulate indoor temperature, keeping spaces cool in summer and warm in winter.
-            </p>
-          </div>
-        </div>
+      {/* Sustainable Architecture Heading */}
+      <div className="sustainable-architecture-section">
+        <h2 className="sustainable-architecture-title">Sustainable Architecture</h2>
       </div>
 
-      {/* Welcome Section */}
-      <div className="welcome-showcase">
-        <div className="welcome-container">
-          <div className="welcome-text-section">
-            <h2 className="welcome-title">Welcome to House on the Clouds</h2>
-            <p className="welcome-description">
-              Step into a world where traditional craftsmanship meets modern comfort. Our welcoming entrance, adorned with the signature mud-painted wall, sets the tone for your extraordinary stay in the heart of Himachal Pradesh.
-              <br /><br />
-              As you enter, you'll be greeted by the warm embrace of our thoughtfully designed interiors, where every element tells a story of heritage and hospitality.
+      {/* Video Section */}
+      <div className="video-showcase">
+        <div className="video-container">
+          <div className="video-text-section">
+            <h2 className="video-content-title">Mud sourced from valley</h2>
+            <p className="video-content-body">
+              At House on the Clouds, every wall tells a story of the land. The mud used in our architecture is sourced directly from the valley, in its natural palette of warm earth tones, bringing the mountains into every corner of our home.
+            </p>
+            <p className="video-content-body">
+              Mud walls crafted by Local Hands
+            </p>
+            <p className="video-content-body">
+              Our walls are more than just structures — they are canvases. Local artisans handcraft mud paintings, layering traditional techniques with timeless artistry.
             </p>
           </div>
-          <div className="welcome-image-section">
-            <img src={WelcomeImage} alt="Welcome to House on the Clouds" className="welcome-image" />
+          <div className="video-section">
+            <div className="video-frame">
+              <video 
+                className="sustainable-video" 
+                autoPlay 
+                muted 
+                loop 
+                playsInline
+                onError={(e) => console.error('Video error:', e)}
+                onLoadStart={() => console.log('Video loading started')}
+                onCanPlay={() => console.log('Video can play')}
+              >
+                <source src={SustainableVideo} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -94,40 +114,6 @@ const OurStory = () => {
           </div>
           <div className="gathering-image-section">
             <img src={GatheringImage} alt="Community Gathering at House on the Clouds" className="gathering-image" />
-          </div>
-        </div>
-      </div>
-
-      {/* Cultural Welcome Section */}
-      <div className="cultural-showcase">
-        <div className="cultural-container">
-          <div className="cultural-image-section">
-            <img src={CulturalImage} alt="Traditional Himachali Welcome Ceremony" className="cultural-image" />
-          </div>
-          <div className="cultural-text-section">
-            <h2 className="cultural-title">A Traditional Welcome</h2>
-            <p className="cultural-description">
-              Experience the authentic warmth of Himachali hospitality through our traditional welcome ceremonies. Dressed in vibrant traditional attire adorned with intricate silver jewelry and turquoise stones, our local women extend the sacred khata scarves as a symbol of respect and blessing.
-              <br /><br />
-              This ancient ritual, passed down through generations, represents the deep-rooted cultural values of the Himalayan people.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Living Room Section */}
-      <div className="living-room-showcase">
-        <div className="living-room-container">
-          <div className="living-room-text-section">
-            <h2 className="living-room-title">Where Comfort Meets Culture</h2>
-            <p className="living-room-description">
-              Our living spaces embody the perfect harmony of traditional craftsmanship and modern comfort. The signature mud-painted wall, with its horizontal stripes of natural earth tones, stands as a testament to the ancient art forms of Himachal Pradesh, while the exposed wooden beams create a rustic yet elegant atmosphere.
-              <br /><br />
-              Large windows frame breathtaking views of the Himalayan landscape, bringing the natural beauty of the mountains into every moment.
-            </p>
-          </div>
-          <div className="living-room-image-section">
-            <img src={LivingRoomImage} alt="Living Room at House on the Clouds" className="living-room-image" />
           </div>
         </div>
       </div>

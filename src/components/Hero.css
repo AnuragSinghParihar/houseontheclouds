@@ -20,27 +20,35 @@
     letter-spacing: 9px;
     color: #5b3b32;
     font-family: 'Playfair Display', serif;
+    font-size: 14px;
+    text-align: center;
 }
 
 .heading-main-two{
     color:#b61f1f;
     font-family: 'Playfair Display', serif;
-    font-size: 60px;
+    font-size: 42px;
     font-weight: 600;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .para-one{
     color: #5b3b32;
-    font-size: 16px;
+    font-size: 14px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
 }
 
 .about-head{
     color:black;
     font-weight: 900;
-    font-size: 15px;
+    font-size: 13px;
     padding-bottom: 0;
     margin-bottom: 0;
+    text-align: center;
 }
 
 .black-line {

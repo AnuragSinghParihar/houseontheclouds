@@ -9,6 +9,8 @@ import Place4 from '../assets/buddha.jpg';
 import TrekKanomo from '../assets/trekkanomo.jpg';
 import Kibber from '../assets/kibber.jpg';
 
+
+
 const Places = [
     {
       name: 'Key Monastery',
@@ -80,6 +82,8 @@ const Places = [
             </div>
           </div>
         )}
+
+
       </section>
     );
   };

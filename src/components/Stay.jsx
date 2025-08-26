@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Stay.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
@@ -8,6 +8,11 @@ import hotelIcon from '../assets/hotel.png';
 import viewIcon from '../assets/view.png';
 import livingRoomIcon from '../assets/living-room.png';
 import foodIcon from '../assets/food.png';
+
+// Import slider images
+import sliderImage1 from '../assets/f76b8068-9e57-4e2f-8319-a6c15cb8cd6d.JPG';
+import sliderImage2 from '../assets/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG';
+import sliderImage3 from '../assets/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG';
 
 // Import room images
 import stayImage from '../assets/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG';
@@ -23,6 +28,55 @@ import image9 from '../assets/c8029426-b8bb-42a5-87dd-d8e57c16e358 copy.JPG';
 
 const Stay = () => {
   const [activeSection, setActiveSection] = useState(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  
+  // Refs for images to apply zoom effect
+  const sliderImageRefs = useRef([]);
+  const additionalImageRefs = useRef([]);
+
+  const images = [sliderImage1, sliderImage2, sliderImage3];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
+  // Intersection Observer for zoom effect
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('image-zoom-active');
+        } else {
+          entry.target.classList.remove('image-zoom-active');
+        }
+      });
+    }, observerOptions);
+
+    // Observe all images
+    const allImages = [
+      ...sliderImageRefs.current,
+      ...additionalImageRefs.current
+    ].filter(Boolean);
+
+    allImages.forEach((img) => {
+      if (img) observer.observe(img);
+    });
+
+    return () => {
+      allImages.forEach((img) => {
+        if (img) observer.unobserve(img);
+      });
+    };
+  }, []);
 
   const toggleSection = (sectionId) => {
     setActiveSection(activeSection === sectionId ? null : sectionId);
@@ -51,8 +105,19 @@ const Stay = () => {
     <>
       <Navbar />
       
-      {/* Hero Image Section */}
-      <div className="stay-hero-image">
+      {/* Hero Image Slider Section */}
+      <div className="stay-hero-slider">
+        <div className="image-slider">
+          {images.map((image, index) => (
+            <img
+              key={index}
+              ref={(el) => (sliderImageRefs.current[index] = el)}
+              src={image}
+              alt={`Stay slider image ${index + 1}`}
+              className={`slider-image scroll-zoom-image ${index === currentImageIndex ? 'active' : ''}`}
+            />
+          ))}
+        </div>
         <div className="hero-image-overlay">
         </div>
         <div className="hero-slogan">
@@ -60,74 +125,52 @@ const Stay = () => {
         </div>
       </div>
       
+      {/* Additional Image Section */}
+      <div className="additional-image-section">
+        <div className="image-container">
+          <img 
+            ref={(el) => (additionalImageRefs.current[0] = el)}
+            src={image6} 
+            alt="Luxury bedroom view" 
+            className="additional-image scroll-zoom-image" 
+          />
+          <img 
+            ref={(el) => (additionalImageRefs.current[1] = el)}
+            src={image2} 
+            alt="Luxury room view" 
+            className="additional-image right-shifted scroll-zoom-image" 
+          />
+          <img 
+            ref={(el) => (additionalImageRefs.current[2] = el)}
+            src={image1} 
+            alt="Luxury bedroom interior" 
+            className="additional-image scroll-zoom-image" 
+          />
+          <img 
+            ref={(el) => (additionalImageRefs.current[3] = el)}
+            src={image5} 
+            alt="Luxury bedroom with striped wall" 
+            className="additional-image right-shifted scroll-zoom-image" 
+          />
+          <img 
+            ref={(el) => (additionalImageRefs.current[4] = el)}
+            src={image3} 
+            alt="Modern bathroom interior" 
+            className="additional-image scroll-zoom-image" 
+          />
+          <img 
+            ref={(el) => (additionalImageRefs.current[5] = el)}
+            src={image4} 
+            alt="Bathroom vanity area" 
+            className="additional-image right-shifted scroll-zoom-image" 
+          />
+        </div>
+      </div>
+      
       {/* Content Section */}
       <section className="stay-content-section">
         <div className="content-container">
           
-          {/* Image and Slogan Layout */}
-          <div className="image-slogan-container">
-            <div className="left-image">
-              <img src={image2} alt="Mountain view room" className="side-image" />
-            </div>
-            
-            <div className="center-section">
-              <h2 className="stay-heading">STAY ABOVE THE CLOUDS</h2>
-            </div>
-            
-            <div className="right-image">
-              <img src={image1} alt="Luxury room view" className="side-image" />
-            </div>
-          </div>
-
-          {/* Amenities Section with Icons */}
-          <div className="amenities-section">
-            <div className="amenities-container">
-              <h2 className="amenities-title">Hotel Amenities & Services</h2>
-              <p className="amenities-subtitle">Everything you need for a perfect mountain stay</p>
-              
-              <div className="amenities-grid">
-                {amenities.map((amenity, index) => (
-                  <div key={index} className="amenity-card">
-                    <div className="amenity-icon">
-                      <img src={amenity.icon} alt={amenity.title} />
-                    </div>
-                    <h3 className="amenity-title">{amenity.title}</h3>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          {/* Image Grid Section */}
-          <div className="image-grid-section">
-            <div className="image-grid">
-              <div className="grid-item">
-                <img src={image9} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={image4} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={image5} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={image6} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={image7} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={image8} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={image3} alt="Hotel room" className="grid-image" />
-              </div>
-              <div className="grid-item">
-                <img src={stayImage} alt="Hotel room" className="grid-image" />
-              </div>
-            </div>
-          </div>
-
           {/* Hotel Information Section */}
           <div className="hotel-info-section">
             <div className="info-container">

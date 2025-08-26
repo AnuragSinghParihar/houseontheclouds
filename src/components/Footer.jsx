@@ -13,18 +13,13 @@ const Footer = () => {
         <h1 className="main-title"><i>House on the Clouds</i></h1>
         <p className="location">SPITI VALLEY</p>
         <p className="tagline">
-          In the Heart of Spiti<br />
-          <em>On the Slopes of Perfection</em>
+          A place to pause, breathe and belong
         </p>
         <div className="footer-underline"></div>
       </header>
       <div className="footer-divider"></div>
       <section className="main-section">
         <div className="left">
-          <h2>Stay Above The Clouds</h2>
-          <p><em>A Warm Welcome Awaits</em></p>
-        </div>
-        <div className="center">
           <p>
             HOUSE ON THE CLOUDS, Chicham village
             172114 
@@ -36,8 +31,10 @@ const Footer = () => {
             +91 9805848433
           </p>
         </div>
+        <div className="center">
+        </div>
         <div className="right">
-          <Link to="/about" className="footer-link">About,</Link>
+          <Link to="/about" className="footer-link">About Us,</Link>
           <Link to="/stay" className="footer-link">Stay,</Link>
           <Link to="/gallery" className="footer-link">Gallery,</Link>
           <Link to="/contact" className="footer-link">Contact</Link>

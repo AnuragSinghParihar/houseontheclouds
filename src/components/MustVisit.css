@@ -183,6 +183,85 @@
   }
 }
 
+/* ---- INFO CARDS GRID ---- */
+.grid-one {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.grid-items {
+  background: #fff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-items:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.icon-of-grid {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.grid-items:hover .icon-of-grid {
+  transform: scale(1.1);
+}
+
+.grid-items h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.grid-items h6 {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.grid-items p {
+  font-size: 14px;
+  color: #555;
+  margin: 6px 0;
+}
+
+.grid-items a {
+  font-size: 14px;
+  margin: 0 4px;
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.grid-items a:hover {
+  color: #0056b3;
+  font-weight: 600;
+}
+
+.grid-items a.active {
+  font-weight: 700;
+  border-bottom: 2px solid #007bff;
+}
+
+.grid-info {
+  font-size: 0.98rem;
+  color: #7a4a3a;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0.85;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .explore-grid {
@@ -195,5 +274,9 @@
 
   .popup-image {
     max-height: 280px;
+  }
+
+  .grid-one {
+    grid-template-columns: 1fr;
   }
 }

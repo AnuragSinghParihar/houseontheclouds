@@ -57,7 +57,7 @@ const Landing = () => {
 
         <div className='writting'>
           <h6 className='heading-one'>SPITI VALLEY</h6>
-          <h2 className='heading-two'>A place to pause, breathe, and belong</h2>
+          <h2 className='heading-two'>A place to pause, breathe and belong</h2>
           <h1 className='heading-three'>House on the Clouds</h1>
         </div>
       </div>
