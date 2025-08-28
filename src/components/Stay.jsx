@@ -15,8 +15,8 @@ const Stay = () => {
 
   const images = [
     "/images/f76b8068-9e57-4e2f-8319-a6c15cb8cd6d.JPG",
-    "/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG",
-    "/images/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG"
+    "/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3-copy.JPG",
+    "/images/94b1a1ab-d592-4a13-8877-f9358ed7605e-copy.JPG"
   ];
 
   useEffect(() => {
@@ -112,37 +112,37 @@ const Stay = () => {
         <div className="image-container">
           <img 
             ref={(el) => (additionalImageRefs.current[0] = el)}
-            src="/images/25343f9f-29ba-4570-8f4a-7fdb5c733ffa copy.JPG" 
+            src="/images/25343f9f-29ba-4570-8f4a-7fdb5c733ffa-copy.JPG" 
             alt="Luxury bedroom view" 
             className="additional-image scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[1] = el)}
-            src="/images/4ee2d515-8c5a-44bf-8232-7b718e4f65ae copy.JPG" 
+            src="/images/4ee2d515-8c5a-44bf-8232-7b718e4f65ae-copy.JPG" 
             alt="Luxury room view" 
             className="additional-image right-shifted scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[2] = el)}
-            src="/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG" 
+            src="/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3-copy.JPG" 
             alt="Luxury bedroom interior" 
             className="additional-image scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[3] = el)}
-            src="/images/6491a429-039e-4ab6-8360-c81ea0631878 copy.JPG" 
+            src="/images/6491a429-039e-4ab6-8360-c81ea0631878-copy.JPG" 
             alt="Luxury bedroom with striped wall" 
             className="additional-image right-shifted scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[4] = el)}
-            src="/images/2d688dd2-d148-4136-954d-9fa65519fc9a copy.JPG" 
+            src="/images/2d688dd2-d148-4136-954d-9fa65519fc9a-copy.JPG" 
             alt="Modern bathroom interior" 
             className="additional-image scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[5] = el)}
-            src="/images/4e11b3c0-a26a-4894-92e2-e821e57235f0 copy.JPG" 
+            src="/images/4e11b3c0-a26a-4894-92e2-e821e57235f0-copy.JPG" 
             alt="Bathroom vanity area" 
             className="additional-image right-shifted scroll-zoom-image" 
           />

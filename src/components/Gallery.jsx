@@ -219,7 +219,7 @@ const Gallery = () => {
                         <p>Discover the pastoral life: yaks grazing alpine meadows, the rare Chumurti horse, and fields of barley and peas that sustain local life. All while embracing the blend of Buddhist devotion, shamanic rites, and ancient ethnic pride that defines the Bodh people's identity.</p>
                       </div>
                       <div className="culture-image">
-                        <img src="/images/68896f836e920.image copy.jpg" alt="Yak Herding in Alpine Meadows" className="section-image" />
+                        <img src="/images/68896f836e920.image-copy.jpg" alt="Yak Herding in Alpine Meadows" className="section-image" />
                       </div>
                     </div>
                   </div>
