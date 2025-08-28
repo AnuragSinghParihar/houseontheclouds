@@ -30,11 +30,7 @@ const RoomShowcase = () => {
             className="fullscreen-image"
           />
           <div className="image-text-overlay">
-            <h1 className="experience-title">
-              House on the Clouds<br/>
-              is not a hotel — it is<br/>
-              an experience.
-            </h1>
+            
           </div>
         </div>
         
@@ -47,9 +43,7 @@ const RoomShowcase = () => {
           />
           <div className="second-image-text-overlay">
             <h2 className="rooms-title">
-              Each room is thoughtfully<br/>
-              designed inspired by<br/>
-              local Spiti architecture
+              
             </h2>
           </div>
         </div>

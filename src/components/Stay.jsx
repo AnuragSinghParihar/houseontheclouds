@@ -121,7 +121,6 @@ const Stay = () => {
         <div className="hero-image-overlay">
         </div>
         <div className="hero-slogan">
-          <h1 className="hero-main-title">Mountains at your window, peace in your soul.</h1>
         </div>
       </div>
       
