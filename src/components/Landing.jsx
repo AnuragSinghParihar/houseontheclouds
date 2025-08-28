@@ -26,7 +26,8 @@ const Landing = () => {
           autoPlay
           muted
           loop
-          
+          preload="metadata"
+          onError={(e) => console.error('Background video error:', e.target.error || 'Unknown error')}
         >
           <source src="/videos/back.mp4" type="video/mp4" />
           Your browser does not support the video tag.

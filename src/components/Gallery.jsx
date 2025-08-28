@@ -114,7 +114,15 @@ const Gallery = () => {
                   className={`gallery-item ${getImageSize(index)}`}
                 >
                   <div className="image-container">
-                    <img src={image} alt={`Hotel image ${index + 1}`} className="gallery-image" />
+                    <img 
+                  src={image} 
+                  alt={`Hotel image ${index + 1}`} 
+                  className="gallery-image"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${image}`);
+                    e.target.style.display = 'none';
+                  }}
+                />
                   </div>
                 </div>
               ))}
@@ -246,7 +254,15 @@ const Gallery = () => {
                   className={`gallery-item ${getImageSize(index)}`}
                 >
                   <div className="image-container">
-                    <img src={image} alt={`Gallery image ${index + 1}`} className="gallery-image" />
+                    <img 
+                  src={image} 
+                  alt={`Gallery image ${index + 1}`} 
+                  className="gallery-image"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${image}`);
+                    e.target.style.display = 'none';
+                  }}
+                />
                   </div>
                 </div>
               ))}

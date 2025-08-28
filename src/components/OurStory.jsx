@@ -66,9 +66,11 @@ const OurStory = () => {
                 muted 
                 loop 
                 playsInline
-                onError={(e) => console.error('Video error:', e)}
+                preload="metadata"
+                onError={(e) => console.error('Video error:', e.target.error || 'Unknown error')}
                 onLoadStart={() => console.log('Video loading started')}
                 onCanPlay={() => console.log('Video can play')}
+                onLoadedData={() => console.log('Video data loaded')}
               >
                 <source src="/videos/1755973836362340-2.MP4" type="video/mp4" />
                 Your browser does not support the video tag.
