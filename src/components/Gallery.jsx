@@ -3,68 +3,23 @@ import './Gallery.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-// Import icons
-import hotelIcon from '../assets/hotel.png';
-import deerIcon from '../assets/deer.png';
-import rangoliIcon from '../assets/rangoli.png';
-import riverIcon from '../assets/river.png';
-
-// Import the single hotel image
-import IMG_0001 from '../assets/IMG_0001.JPG';
-
-// Import new hotel images
-import IMG_0078 from '../assets/IMG_0078.JPG';
-import IMG_0048 from '../assets/IMG_0048.JPG';
-import IMG_0090 from '../assets/IMG_0090.JPG';
-import IMG_0110 from '../assets/IMG_0110.JPG';
-import IMG_0149 from '../assets/IMG_0149.JPG';
-import IMG_0228 from '../assets/IMG_0228.JPG';
-import IMG_0249 from '../assets/IMG_0249.JPG';
-import IMG_0329 from '../assets/IMG_0329.JPG';
-import IMG_4701 from '../assets/IMG_4701.JPG';
-import IMG_4704 from '../assets/IMG_4704.JPG';
-import IMG_5341 from '../assets/IMG_5341.JPG';
-import IMG_8537 from '../assets/IMG_8537.JPG';
-import IMG_8938 from '../assets/IMG_8938.JPG';
-import DJI_20250310_165228_826 from '../assets/DJI_20250310_165228_826.JPG';
-
-// Import wildlife images requested
-import IMG_0024 from '../assets/IMG_0024.JPG';
-import IMG_0022 from '../assets/IMG_0022.JPG';
-import IMG_0017 from '../assets/IMG_0017.JPG';
-import IMG_0029 from '../assets/IMG_0029.JPG';
-import IMG_0212 from '../assets/IMG_0212.JPG';
-
-// Import river images requested
-import IMG_0219 from '../assets/IMG_0219.JPG';
-import IMG_0218 from '../assets/IMG_0218.JPG';
-import IMG_0028 from '../assets/IMG_0028.JPG';
-import IMG_0027 from '../assets/IMG_0027.JPG';
-import IMG_0026 from '../assets/IMG_0026.JPG';
-import IMG_0023 from '../assets/IMG_0023.JPG';
-import IMG_0216 from '../assets/IMG_0216.JPG';
-
-// Import festival image for culture section
-import LaDarFestival from '../assets/la-dar.jpeg';
-import KibberVillage from '../assets/kibber.jpg';
-import PastoralLife from '../assets/68896f836e920.image copy.jpg';
-import HikkimPostOffice from '../assets/hikkim.jpg';
+// Assets moved to public folder - using direct URLs
 
 const Gallery = () => {
   const [activeSection, setActiveSection] = useState('hotel');
   
   // Hotel images - now including all the new images
   const hotelImages = [
-    IMG_0001, IMG_0078, IMG_0048, IMG_0090, IMG_0110, 
-    IMG_0149, IMG_0228, IMG_0249, IMG_0329, IMG_4701, 
-    IMG_4704, IMG_5341, IMG_8537, IMG_8938, DJI_20250310_165228_826
+    "/images/IMG_0001.JPG", "/images/IMG_0078.JPG", "/images/IMG_0048.JPG", "/images/IMG_0090.JPG", "/images/IMG_0110.JPG", 
+    "/images/IMG_0149.JPG", "/images/IMG_0228.JPG", "/images/IMG_0249.JPG", "/images/IMG_0329.JPG", "/images/IMG_4701.JPG", 
+    "/images/IMG_4704.JPG", "/images/IMG_5341.JPG", "/images/IMG_8537.JPG", "/images/IMG_8938.JPG", "/images/DJI_20250310_165228_826.JPG"
   ];
 
   // Wildlife images provided by you
-  const wildlifeImages = [IMG_0024, IMG_0022, IMG_0017, IMG_0029, IMG_0212];
+  const wildlifeImages = ["/images/IMG_0024.JPG", "/images/IMG_0022.JPG", "/images/IMG_0017.JPG", "/images/IMG_0029.JPG", "/images/IMG_0212.JPG"];
 
   // River images provided by you
-  const riverImages = [IMG_0219, IMG_0218, IMG_0028, IMG_0027, IMG_0026, IMG_0023, IMG_0216];
+  const riverImages = ["/images/IMG_0219.JPG", "/images/IMG_0218.JPG", "/images/IMG_0028.JPG", "/images/IMG_0027.JPG", "/images/IMG_0026.JPG", "/images/IMG_0023.JPG", "/images/IMG_0216.JPG"];
 
   const getImagesForSection = () => {
     switch (activeSection) {
@@ -90,10 +45,10 @@ const Gallery = () => {
   };
 
   const sections = [
-    { id: 'hotel', name: 'HOTEL', icon: hotelIcon },
-    { id: 'wildlife', name: 'WILD ANIMALS', icon: deerIcon },
-    { id: 'culture', name: 'CULTURE', icon: rangoliIcon },
-    { id: 'waterscapes', name: 'WATERSCAPES', icon: riverIcon }
+    { id: 'hotel', name: 'HOTEL', icon: "/images/hotel.png" },
+    { id: 'wildlife', name: 'WILD ANIMALS', icon: "/images/deer.png" },
+    { id: 'culture', name: 'CULTURE', icon: "/images/rangoli.png" },
+    { id: 'waterscapes', name: 'WATERSCAPES', icon: "/images/river.png" }
   ];
 
   // Wildlife content data
@@ -240,7 +195,7 @@ const Gallery = () => {
                         <p>Join us during cultural highlights such as the Ladarcha fair in August, Spiti Losar in November, or winter solstice festivities. Each brings alive folk dances, seasonal fare, crafts, and narratives passed down through generations.</p>
                       </div>
                       <div className="culture-image">
-                        <img src={LaDarFestival} alt="Traditional Festival Dance" className="section-image" />
+                        <img src="/images/la-dar.jpeg" alt="Traditional Festival Dance" className="section-image" />
                       </div>
                     </div>
                   </div>
@@ -252,7 +207,7 @@ const Gallery = () => {
                         <p>Venture into Chicham and neighboring hamlets to meet families whose homes are built from earth, stone, and stories. Here, generosity is expressed through gestures—earthy thalis, shared tales, and the kind greeting, "Julley," meaning hello, thank you, and farewell.</p>
                       </div>
                       <div className="culture-image">
-                        <img src={KibberVillage} alt="Traditional Village in Spiti Valley" className="section-image" />
+                        <img src="/images/kibber.jpg" alt="Traditional Village in Spiti Valley" className="section-image" />
                       </div>
                     </div>
                   </div>
@@ -264,7 +219,7 @@ const Gallery = () => {
                         <p>Discover the pastoral life: yaks grazing alpine meadows, the rare Chumurti horse, and fields of barley and peas that sustain local life. All while embracing the blend of Buddhist devotion, shamanic rites, and ancient ethnic pride that defines the Bodh people's identity.</p>
                       </div>
                       <div className="culture-image">
-                        <img src={PastoralLife} alt="Yak Herding in Alpine Meadows" className="section-image" />
+                        <img src="/images/68896f836e920.image copy.jpg" alt="Yak Herding in Alpine Meadows" className="section-image" />
                       </div>
                     </div>
                   </div>
@@ -276,7 +231,7 @@ const Gallery = () => {
                         <p>Enhance your stay with festival-timed tours, monastery visits, or immersive village walks. Sample local chhaang or arak, send postcards from Hikkim—the world's highest post office—or simply linger, absorbed by Spiti's timeless silence.</p>
                       </div>
                       <div className="culture-image">
-                        <img src={HikkimPostOffice} alt="World's Highest Post Office in Hikkim" className="section-image" />
+                        <img src="/images/hikkim.jpg" alt="World's Highest Post Office in Hikkim" className="section-image" />
                       </div>
                     </div>
                   </div>
