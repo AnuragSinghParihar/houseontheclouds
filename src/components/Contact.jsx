@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Contact.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import mainBackground from '../assets/mainbk2.jpg';
+// Assets moved to public folder - using direct URLs
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -38,7 +38,7 @@ const Contact = () => {
 
       <section className="contact-section">
         <div className="contact-container">
-          <div className="background-image-container" style={{ backgroundImage: `url(${mainBackground})` }}></div>
+          <div className="background-image-container" style={{ backgroundImage: `url(/images/mainbk2.jpg)` }}></div>
           <div className="contact-form-container">
             <div className="form-header">
               <h2>Send us a Query</h2>

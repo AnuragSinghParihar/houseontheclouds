@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import './Booking.css';
-import sampleRoomImg from '../assets/roomone.jpg';
-import hotelBg from '../assets/mainbk2.jpg';
+// Assets moved to public folder - using direct URLs
 
 const ROOMS = [
-  { finalNo: 0, oldNo: 'Lama', name: 'Dawa (ཟླ་བ་)', meaning: 'Moon', essence: 'Grace of the night', img: sampleRoomImg },
-  { finalNo: 1, oldNo: '1', name: 'Sprin (སྤྲིན་)', meaning: 'Clouds', essence: 'The floating sky', img: sampleRoomImg },
-  { finalNo: 2, oldNo: '2', name: 'Yul (ཡུལ་)', meaning: 'Village', essence: 'The land that holds your spirit', img: sampleRoomImg },
-  { finalNo: 3, oldNo: '7', name: 'Riwo (རི་བོ་)', meaning: 'Mountain', essence: 'The stillness of giants', img: sampleRoomImg },
-  { finalNo: 4, oldNo: '3', name: 'Kha (དཀར་པོ་)', meaning: 'Snow', essence: 'The purity of the highlands', img: sampleRoomImg },
-  { finalNo: 5, oldNo: '4', name: 'Namkha (ནམ་མཁའ་)', meaning: 'Sky', essence: 'Where the clouds drift endlessly', img: sampleRoomImg },
-  { finalNo: 6, oldNo: '6', name: 'Karma (གར་)', meaning: 'Star', essence: 'A light that watches in silence', img: sampleRoomImg },
-  { finalNo: 7, oldNo: '5', name: 'Nima (ཉི་མ་)', meaning: 'Sun', essence: 'The warmth that awakens all', img: sampleRoomImg },
+  { finalNo: 0, oldNo: 'Lama', name: 'Dawa (ཟླ་བ་)', meaning: 'Moon', essence: 'Grace of the night', img: "/images/roomone.jpg" },
+  { finalNo: 1, oldNo: '1', name: 'Sprin (སྤྲིན་)', meaning: 'Clouds', essence: 'The floating sky', img: "/images/roomone.jpg" },
+  { finalNo: 2, oldNo: '2', name: 'Yul (ཡུལ་)', meaning: 'Village', essence: 'The land that holds your spirit', img: "/images/roomone.jpg" },
+  { finalNo: 3, oldNo: '7', name: 'Riwo (རི་བོ་)', meaning: 'Mountain', essence: 'The stillness of giants', img: "/images/roomone.jpg" },
+  { finalNo: 4, oldNo: '3', name: 'Kha (དཀར་པོ་)', meaning: 'Snow', essence: 'The purity of the highlands', img: "/images/roomone.jpg" },
+  { finalNo: 5, oldNo: '4', name: 'Namkha (ནམ་མཁའ་)', meaning: 'Sky', essence: 'Where the clouds drift endlessly', img: "/images/roomone.jpg" },
+  { finalNo: 6, oldNo: '6', name: 'Karma (གར་)', meaning: 'Star', essence: 'A light that watches in silence', img: "/images/roomone.jpg" },
+  { finalNo: 7, oldNo: '5', name: 'Nima (ཉི་མ་)', meaning: 'Sun', essence: 'The warmth that awakens all', img: "/images/roomone.jpg" },
 ];
 
 const initialForm = {
@@ -85,7 +84,7 @@ const Booking = () => {
   return (
     <div className="booking-page-root">
       {/* Hero Section with Background Image */}
-      <div className="booking-hero" style={{ backgroundImage: `url(${hotelBg})` }}>
+              <div className="booking-hero" style={{ backgroundImage: `url(/images/mainbk2.jpg)` }}>
         <div className="booking-hero-overlay">
           <div className="booking-search-bar">
             <div className="search-field">

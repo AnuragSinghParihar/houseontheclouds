@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import './OurStory.css'
-import NightViewImage from '../assets/IMG_0307.jpg'
-import GatheringImage from '../assets/IMG_0297.JPG'
-import OwnerImage from '../assets/IMG_0309.jpg'
-import Image1 from '../assets/IMG_9462.jpg'
-import Image2 from '../assets/IMG_9520.jpg'
-import Image3 from '../assets/IMG_9444.jpg'
-import SustainableVideo from '../assets/1755973836362340 2.MP4'
+// Assets moved to public folder - using direct URLs
 import Navbar from './Navbar'
 import Footer from './Footer'
 
 const OurStory = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const images = [Image1, Image2, Image3];
+  const images = ["/images/IMG_9462.jpg", "/images/IMG_9520.jpg", "/images/IMG_9444.jpg"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -76,7 +70,7 @@ const OurStory = () => {
                 onLoadStart={() => console.log('Video loading started')}
                 onCanPlay={() => console.log('Video can play')}
               >
-                <source src={SustainableVideo} type="video/mp4" />
+                <source src="/videos/1755973836362340 2.MP4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -88,7 +82,7 @@ const OurStory = () => {
       <div className="night-view-showcase">
         <div className="night-view-container">
           <div className="night-view-image-section">
-            <img src={NightViewImage} alt="House on the Clouds at Night" className="night-view-image" />
+            <img src="/images/IMG_0307.jpg" alt="House on the Clouds at Night" className="night-view-image" />
           </div>
           <div className="night-view-text-section">
             <h2 className="night-view-title">A Sanctuary Under the Stars</h2>
@@ -113,7 +107,7 @@ const OurStory = () => {
             </p>
           </div>
           <div className="gathering-image-section">
-            <img src={GatheringImage} alt="Community Gathering at House on the Clouds" className="gathering-image" />
+            <img src="/images/IMG_0297.JPG" alt="Community Gathering at House on the Clouds" className="gathering-image" />
           </div>
         </div>
       </div>
@@ -122,7 +116,7 @@ const OurStory = () => {
       <div className="owner-showcase">
         <div className="owner-container">
           <div className="owner-image-section">
-            <img src={OwnerImage} alt="Hotel Owner and Building Owner with Family" className="owner-image" />
+            <img src="/images/IMG_0309.jpg" alt="Hotel Owner and Building Owner with Family" className="owner-image" />
           </div>
           <div className="owner-text-section">
             <h2 className="owner-title">Meet Our Family</h2>

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import './Landing.css';
-import logo from '../assets/IMG_9032.jpeg';
+// Assets moved to public folder - using direct URLs
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -62,7 +62,7 @@ const Navbar = () => {
         <div className="navbar-center">
           <div className="logo-box">
             <Link to="/">
-              <img src={logo} alt="Logo" />
+              <img src="/images/IMG_9032.jpeg" alt="Logo" />
             </Link>
           </div>
         </div>
@@ -87,7 +87,7 @@ const Navbar = () => {
           <div className="mobile-menu-header">
             <div className="logo-box mobile-logo">
               <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>
-                <img src={logo} alt="Logo" />
+                <img src="/images/IMG_9032.jpeg" alt="Logo" />
               </Link>
             </div>
             <button className="close-menu-btn" onClick={toggleMobileMenu}>
