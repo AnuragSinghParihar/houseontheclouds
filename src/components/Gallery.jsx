@@ -51,6 +51,12 @@ const Gallery = () => {
     { id: 'waterscapes', name: 'WATERSCAPES', icon: "/images/river.png" }
   ];
 
+  // Add error handling for section icons
+  const handleIconError = (e, iconPath) => {
+    console.error(`Failed to load icon: ${iconPath}`);
+    e.target.style.display = 'none';
+  };
+
   // Wildlife content data
   const wildlifeContent = [
     {
@@ -98,7 +104,12 @@ const Gallery = () => {
                 }}
               >
                 <span className="tab-icon">
-                  <img src={section.icon} alt={section.name} className="tab-icon-image" />
+                  <img 
+                    src={section.icon} 
+                    alt={section.name} 
+                    className="tab-icon-image"
+                    onError={(e) => handleIconError(e, section.icon)}
+                  />
                 </span>
                 <span className="tab-name">{section.name}</span>
               </button>
@@ -226,9 +237,17 @@ const Gallery = () => {
                         <h3>High-Altitude Traditions</h3>
                         <p>Discover the pastoral life: yaks grazing alpine meadows, the rare Chumurti horse, and fields of barley and peas that sustain local life. All while embracing the blend of Buddhist devotion, shamanic rites, and ancient ethnic pride that defines the Bodh people's identity.</p>
                       </div>
-                      <div className="culture-image">
-                        <img src="/images/68896f836e920.image-copy.jpg" alt="Yak Herding in Alpine Meadows" className="section-image" />
-                      </div>
+                                              <div className="culture-image">
+                          <img 
+                            src="/images/68896f836e920.image-copy.jpg" 
+                            alt="Yak Herding in Alpine Meadows" 
+                            className="section-image"
+                            onError={(e) => {
+                              console.error('Failed to load culture image');
+                              e.target.style.display = 'none';
+                            }}
+                          />
+                        </div>
                     </div>
                   </div>
                   

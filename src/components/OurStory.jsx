@@ -66,11 +66,27 @@ const OurStory = () => {
                 muted 
                 loop 
                 playsInline
-                preload="metadata"
-                onError={(e) => console.error('Video error:', e.target.error || 'Unknown error')}
+                preload="none"
+                onError={(e) => {
+                  console.error('Video error:', e.target.error || 'Unknown error');
+                  console.error('Video src:', e.target.currentSrc);
+                  console.error('Video networkState:', e.target.networkState);
+                  // Hide video and show fallback image
+                  e.target.style.display = 'none';
+                  const fallback = document.createElement('img');
+                  fallback.src = '/images/IMG_0307.jpg';
+                  fallback.alt = 'Sustainable Architecture';
+                  fallback.className = 'sustainable-video-fallback';
+                  fallback.style.width = '100%';
+                  fallback.style.height = '100%';
+                  fallback.style.objectFit = 'cover';
+                  e.target.parentNode.appendChild(fallback);
+                }}
                 onLoadStart={() => console.log('Video loading started')}
                 onCanPlay={() => console.log('Video can play')}
                 onLoadedData={() => console.log('Video data loaded')}
+                onAbort={() => console.log('Video loading aborted')}
+                onStalled={() => console.log('Video loading stalled')}
               >
                 <source src="/videos/1755973836362340-2.MP4" type="video/mp4" />
                 Your browser does not support the video tag.
