@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './Landing.css';
-import Backvideo from "../assets/back.mp4"
-import logo from "../assets/IMG_9032.jpeg"
+// Assets moved to public folder - using direct URLs
 
 const Landing = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,7 +28,7 @@ const Landing = () => {
           loop
           
         >
-          <source src={Backvideo} type="video/mp4" />
+          <source src="/videos/back.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
 
@@ -45,7 +44,7 @@ const Landing = () => {
 
             <div className="navbar-center">
               <div className="logo-box">
-                <img src={logo} alt="Logo" />
+                <img src="/images/IMG_9032.jpeg" alt="Logo" />
               </div>
             </div>
 

@@ -1,12 +1,12 @@
 import React from 'react';
 import './About.css';
-import HotelVideo from '../assets/hotelvideo.mp4';
+// Assets moved to public folder - using direct URLs
 
 const About = () => {
   return (
     <div className="about-video-bg">
       <video className="about-bg-video" autoPlay muted loop playsInline>
-        <source src={HotelVideo} type="video/mp4" />
+        <source src="/videos/hotelvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="about-overlay" />

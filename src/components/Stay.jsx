@@ -3,28 +3,7 @@ import './Stay.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-// Import icons
-import hotelIcon from '../assets/hotel.png';
-import viewIcon from '../assets/view.png';
-import livingRoomIcon from '../assets/living-room.png';
-import foodIcon from '../assets/food.png';
-
-// Import slider images
-import sliderImage1 from '../assets/f76b8068-9e57-4e2f-8319-a6c15cb8cd6d.JPG';
-import sliderImage2 from '../assets/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG';
-import sliderImage3 from '../assets/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG';
-
-// Import room images
-import stayImage from '../assets/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG';
-import image1 from '../assets/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG';
-import image2 from '../assets/4ee2d515-8c5a-44bf-8232-7b718e4f65ae copy.JPG';
-import image3 from '../assets/2d688dd2-d148-4136-954d-9fa65519fc9a copy.JPG';
-import image4 from '../assets/4e11b3c0-a26a-4894-92e2-e821e57235f0 copy.JPG';
-import image5 from '../assets/6491a429-039e-4ab6-8360-c81ea0631878 copy.JPG';
-import image6 from '../assets/25343f9f-29ba-4570-8f4a-7fdb5c733ffa copy.JPG';
-import image7 from '../assets/79341af6-0786-4d30-ac9c-ab5d287571cf copy.JPG';
-import image8 from '../assets/a6ecd3d2-9e62-47b8-a584-c81cc0ad2aa0 copy.JPG';
-import image9 from '../assets/c8029426-b8bb-42a5-87dd-d8e57c16e358 copy.JPG';
+// Assets moved to public folder - using direct URLs
 
 const Stay = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -34,7 +13,11 @@ const Stay = () => {
   const sliderImageRefs = useRef([]);
   const additionalImageRefs = useRef([]);
 
-  const images = [sliderImage1, sliderImage2, sliderImage3];
+  const images = [
+    "/images/f76b8068-9e57-4e2f-8319-a6c15cb8cd6d.JPG",
+    "/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG",
+    "/images/94b1a1ab-d592-4a13-8877-f9358ed7605e copy.JPG"
+  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -84,19 +67,19 @@ const Stay = () => {
 
   const amenities = [
     {
-      icon: hotelIcon,
+      icon: "/images/hotel.png",
       title: "Luxury Rooms"
     },
     {
-      icon: viewIcon,
+      icon: "/images/view.png",
       title: "Panoramic Views"
     },
     {
-      icon: livingRoomIcon,
+      icon: "/images/living-room.png",
       title: "Cozy Living Spaces"
     },
     {
-      icon: foodIcon,
+      icon: "/images/food.png",
       title: "Local Cuisine"
     }
   ];
@@ -129,37 +112,37 @@ const Stay = () => {
         <div className="image-container">
           <img 
             ref={(el) => (additionalImageRefs.current[0] = el)}
-            src={image6} 
+            src="/images/25343f9f-29ba-4570-8f4a-7fdb5c733ffa copy.JPG" 
             alt="Luxury bedroom view" 
             className="additional-image scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[1] = el)}
-            src={image2} 
+            src="/images/4ee2d515-8c5a-44bf-8232-7b718e4f65ae copy.JPG" 
             alt="Luxury room view" 
             className="additional-image right-shifted scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[2] = el)}
-            src={image1} 
+            src="/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3 copy.JPG" 
             alt="Luxury bedroom interior" 
             className="additional-image scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[3] = el)}
-            src={image5} 
+            src="/images/6491a429-039e-4ab6-8360-c81ea0631878 copy.JPG" 
             alt="Luxury bedroom with striped wall" 
             className="additional-image right-shifted scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[4] = el)}
-            src={image3} 
+            src="/images/2d688dd2-d148-4136-954d-9fa65519fc9a copy.JPG" 
             alt="Modern bathroom interior" 
             className="additional-image scroll-zoom-image" 
           />
           <img 
             ref={(el) => (additionalImageRefs.current[5] = el)}
-            src={image4} 
+            src="/images/4e11b3c0-a26a-4894-92e2-e821e57235f0 copy.JPG" 
             alt="Bathroom vanity area" 
             className="additional-image right-shifted scroll-zoom-image" 
           />

@@ -1,11 +1,8 @@
 import React from 'react';
 import './Dine.css';
-import HotelVideo from '../assets/hotelvideo.mp4';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import imageone from '../assets/imageone.JPG';
-import imagefifth from '../assets/fifthimage.JPG';
-import imagesecond from '../assets/imagesecond.JPG';
+// Assets moved to public folder - using direct URLs
 
 const Dine = () => {
   return (
@@ -13,7 +10,7 @@ const Dine = () => {
       <Navbar />
       <div className="dine-video-bg">
         <video className="dine-bg-video" autoPlay muted loop playsInline>
-          <source src={HotelVideo} type="video/mp4" />
+          <source src="/videos/hotelvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <div className="dine-overlay" />
@@ -31,7 +28,7 @@ const Dine = () => {
       <section className="livingroom-section">
         <div className="livingroom-container">
           <div className="livingroom-image fade-in-left">
-            <img src={imageone} alt="Living Room" />
+            <img src="/images/imageone.JPG" alt="Living Room" />
           </div>
           <div className="livingroom-content fade-in-right">
             <h2 className="livingroom-title">The Living Room</h2>
@@ -44,7 +41,7 @@ const Dine = () => {
       </section>
 
       
-      <section className="dham-section" style={{ backgroundImage: `url(${imagesecond})` }}>
+      <section className="dham-section" style={{ backgroundImage: `url(/images/imagesecond.JPG)` }}>
         <div className="dham-overlay" />
         <h2 className="dham-title fade-in-up">Dham</h2>
       </section>

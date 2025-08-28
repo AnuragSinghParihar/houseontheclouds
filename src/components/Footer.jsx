@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Footer.css';
-import logo from '../assets/IMG_9032.jpeg';
+// Assets moved to public folder - using direct URLs
 
 const Footer = () => {
   return (
     <div className="footer-container">
       <header className="logo-header">
         <div className="logo-center">
-          <img src={logo} alt="Logo" className="logo" />
+          <img src="/images/IMG_9032.jpeg" alt="Logo" className="logo" />
         </div>
         <h1 className="main-title"><i>House on the Clouds</i></h1>
         <p className="location">SPITI VALLEY</p>
