@@ -20,7 +20,7 @@ const RoomShowcase = () => {
         {/* First Image - Full Screen Cover */}
         <div className="fullscreen-image-container">
           <img 
-            src="/images/House on the Clouds is not a hotel — it is an experience. (2).png" 
+            src="/images/house-on-the-clouds-experience-2.png" 
             alt="House on the Clouds is not a hotel — it is an experience" 
             className="fullscreen-image"
           />
@@ -31,7 +31,7 @@ const RoomShowcase = () => {
         {/* Second Image - Below the first */}
         <div className="second-image-container">
           <img 
-            src="/images/House on the Clouds is not a hotel — it is an experience. (3).png" 
+            src="/images/house-on-the-clouds-experience-3.png" 
             alt="A beautiful room with a view" 
             className="second-image"
           />

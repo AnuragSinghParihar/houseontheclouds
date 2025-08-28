@@ -70,7 +70,7 @@ const OurStory = () => {
                 onLoadStart={() => console.log('Video loading started')}
                 onCanPlay={() => console.log('Video can play')}
               >
-                <source src="/videos/1755973836362340 2.MP4" type="video/mp4" />
+                <source src="/videos/1755973836362340-2.MP4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
