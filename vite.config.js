@@ -12,6 +12,16 @@ export default defineConfig({
       input: {
         main: './index.html'
       }
+    },
+    // Optimize chunk size
+    chunkSizeWarningLimit: 1000,
+    // Enable source maps for debugging
+    sourcemap: false
+  },
+  // Optimize server settings
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000'
     }
   }
 })
