@@ -18,25 +18,37 @@ const RoomShowcase = () => {
   return (
     <section className="room-showcase">
       <div className="showcase-content">
-        {/* First Image - Full Screen Cover */}
+        {/* First Image - Medium size on right side */}
         <div className="fullscreen-image-container">
           <img 
-            src="/images/house-on-the-clouds-experience-2.png" 
+            src="/images/landing1.JPG" 
             alt="House on the Clouds is not a hotel — it is an experience" 
             className="fullscreen-image"
           />
           <div className="image-text-overlay">
+            <div className="text-content">
+              <p className="combined-text">House on the Clouds is not a hotel — it is an experience. Set amidst quiet landscapes, House on the Clouds invites you to pause and reconnect.</p>
+            </div>
           </div>
         </div>
         
         {/* Second Image - Below the first */}
         <div className="second-image-container">
           <img 
-            src="/images/house-on-the-clouds-experience-3.png" 
+            src="/images/94b1a1ab-d592-4a13-8877-f9358ed7605e-copy.JPG" 
             alt="A beautiful room with a view" 
             className="second-image"
           />
-          <div className="second-image-text-overlay">
+        </div>
+        
+        {/* Text outside the image */}
+        <div className="second-text-container">
+          <div className="second-text-content">
+            <p className="second-combined-text">
+              Each room is thoughtfully
+              designed inspired by local
+              Spiti architecture.
+            </p>
           </div>
         </div>
       </div>

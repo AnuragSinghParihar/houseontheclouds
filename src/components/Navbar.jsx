@@ -52,9 +52,8 @@ const Navbar = () => {
     <nav>
       <section className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div className="navbar-left">
-          <Link to="/" className={location.pathname === '/' ? 'active' : ''}>Home</Link>
-          <Link to="/about" className={`link-btn ${location.pathname === '/about' ? 'active' : ''}`}>About Us</Link>
-          <Link to="/stay" className={location.pathname === '/stay' ? 'active' : ''}>Stay</Link>
+          <Link to="/about" className={`link-btn ${location.pathname === '/about' ? 'active' : ''}`}>The Journey</Link>
+          <Link to="/stay" className={location.pathname === '/stay' ? 'active' : ''}>Accommodation</Link>
           <Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''}>Gallery</Link>
           <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
         </div>
@@ -96,14 +95,11 @@ const Navbar = () => {
           </div>
           
           <div className="mobile-menu-links">
-            <Link to="/" className={location.pathname === '/' ? 'active' : ''} onClick={() => setIsMobileMenuOpen(false)}>
-              Home
-            </Link>
             <Link to="/about" className={location.pathname === '/about' ? 'active' : ''} onClick={() => setIsMobileMenuOpen(false)}>
-              About Us
+              The Journey
             </Link>
             <Link to="/stay" className={location.pathname === '/stay' ? 'active' : ''} onClick={() => setIsMobileMenuOpen(false)}>
-              Stay
+              Accommodation
             </Link>
             <Link to="/gallery" className={location.pathname === '/gallery' ? 'active' : ''} onClick={() => setIsMobileMenuOpen(false)}>
               Gallery

@@ -35,13 +35,12 @@ const Landing = () => {
 
         <nav>
           <section className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
-            <div className="navbar-left">
-              <Link to="/">Home</Link>
-              <Link to="/about" className="link-btn">About Us</Link>
-              <Link to="/stay">Stay</Link>
-              <Link to="/gallery">Gallery</Link>
-              <Link to="/contact">Contact</Link>
-            </div>
+                          <div className="navbar-left">
+                <Link to="/about" className="link-btn">The Journey</Link>
+                <Link to="/stay">Accommodation</Link>
+                <Link to="/gallery">Gallery</Link>
+                <Link to="/contact">Contact</Link>
+              </div>
 
             <div className="navbar-center">
               <div className="logo-box">

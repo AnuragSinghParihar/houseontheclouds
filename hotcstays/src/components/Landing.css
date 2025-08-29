@@ -43,12 +43,12 @@ body, html {
 }
 
 .navbar.scrolled {
-  background: linear-gradient(135deg, #4a1818 0%, #3a1414 100%) !important;
+  background: #4a1818 !important;
   backdrop-filter: blur(10px) !important;
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(182, 31, 31, 0.3),
-    0 0 20px rgba(182, 31, 31, 0.2),
+    0 0 0 1px rgba(74, 24, 24, 0.3),
+    0 0 20px rgba(74, 24, 24, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -167,12 +167,12 @@ body:has(.contact-page) .navbar .book-btn:hover {
 /* Permanent navbar background for gallery and contact pages */
 body:has(.gallery-page) .navbar,
 body:has(.contact-page) .navbar {
-  background: linear-gradient(135deg, #4a1818 0%, #3a1414 100%) !important;
+  background: #4a1818 !important;
   backdrop-filter: blur(10px) !important;
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(182, 31, 31, 0.3),
-    0 0 20px rgba(182, 31, 31, 0.2),
+    0 0 0 1px rgba(74, 24, 24, 0.3),
+    0 0 20px rgba(74, 24, 24, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -186,9 +186,9 @@ body:has(.contact-page) .navbar::before {
   bottom: 0;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(182, 31, 31, 0.1) 20%, 
-    rgba(182, 31, 31, 0.2) 50%, 
-    rgba(182, 31, 31, 0.1) 80%, 
+    rgba(180, 90, 74, 0.1) 20%, 
+    rgba(180, 90, 74, 0.2) 50%, 
+    rgba(180, 90, 74, 0.1) 80%, 
     transparent 100%);
   pointer-events: none;
   animation: glowPulse 3s ease-in-out infinite;
@@ -207,7 +207,7 @@ body:has(.contact-page) .navbar::before {
 }
 
 .logo-box img {
-  height: 50px;
+  height: 70px;
   width: auto;
   object-fit: contain;
 }
@@ -448,7 +448,7 @@ body:has(.contact-page) .navbar::before {
 }
 
 .mobile-logo img {
-  height: 40px;
+  height: 55px;
   width: auto;
 }
 

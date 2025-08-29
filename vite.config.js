@@ -20,6 +20,7 @@ export default defineConfig({
   },
   // Optimize server settings
   server: {
+    port: 5175,
     headers: {
       'Cache-Control': 'public, max-age=31536000'
     }

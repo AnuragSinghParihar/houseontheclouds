@@ -18,6 +18,7 @@
   flex: 1;
   min-width: 320px;
   max-width: 500px;
+  text-align: right;
 }
 
 .hotc-text h2 {
@@ -39,11 +40,11 @@
 .hotc-btn {
   background-color: #b61f1f;
   color: #fff;
-  padding: 12px 28px;
+  padding: 16px 36px;
   border-radius: 28px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
   transition: background 0.3s ease;
 }
 

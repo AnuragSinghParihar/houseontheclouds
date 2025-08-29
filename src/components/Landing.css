@@ -43,12 +43,12 @@ body, html {
 }
 
 .navbar.scrolled {
-  background: linear-gradient(135deg, #4a1818 0%, #3a1414 100%) !important;
+  background: #4a1818 !important;
   backdrop-filter: blur(10px) !important;
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(182, 31, 31, 0.3),
-    0 0 20px rgba(182, 31, 31, 0.2),
+    0 0 0 1px rgba(74, 24, 24, 0.3),
+    0 0 20px rgba(74, 24, 24, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -61,9 +61,9 @@ body, html {
   bottom: 0;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(182, 31, 31, 0.1) 20%, 
-    rgba(182, 31, 31, 0.2) 50%, 
-    rgba(182, 31, 31, 0.1) 80%, 
+    rgba(74, 24, 24, 0.1) 20%, 
+    rgba(74, 24, 24, 0.2) 50%, 
+    rgba(74, 24, 24, 0.1) 80%, 
     transparent 100%);
   pointer-events: none;
   animation: glowPulse 3s ease-in-out infinite;
@@ -112,11 +112,7 @@ body, html {
   border-radius: 5px;
 }
 
-.navbar-left a:hover {
-  color: #ffd700;
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
+
 
 .navbar-left a.active {
   color: white !important;
@@ -130,11 +126,7 @@ body, html {
   color: white !important;
 }
 
-.navbar:has(a[href="/gallery"].active) .navbar-left a:hover,
-.navbar:has(a[href="/gallery"].active) .book-btn:hover {
-  color: #ffd700 !important;
-  background: rgba(255, 255, 255, 0.1);
-}
+
 
 /* When contact page is active, change all navbar links to white for better contrast */
 .navbar:has(a[href="/contact"].active) .navbar-left a,
@@ -142,11 +134,7 @@ body, html {
   color: white !important;
 }
 
-.navbar:has(a[href="/contact"].active) .navbar-left a:hover,
-.navbar:has(a[href="/contact"].active) .book-btn:hover {
-  color: #ffd700 !important;
-  background: rgba(255, 255, 255, 0.1);
-}
+
 
 /* Force white text for gallery and contact pages even when not scrolled */
 body:has(.gallery-page) .navbar .navbar-left a,
@@ -156,23 +144,17 @@ body:has(.contact-page) .navbar .book-btn {
   color: white !important;
 }
 
-body:has(.gallery-page) .navbar .navbar-left a:hover,
-body:has(.gallery-page) .navbar .book-btn:hover,
-body:has(.contact-page) .navbar .navbar-left a:hover,
-body:has(.contact-page) .navbar .book-btn:hover {
-  color: #ffd700 !important;
-  background: rgba(255, 255, 255, 0.1);
-}
+
 
 /* Permanent navbar background for gallery and contact pages */
 body:has(.gallery-page) .navbar,
 body:has(.contact-page) .navbar {
-  background: linear-gradient(135deg, #4a1818 0%, #3a1414 100%) !important;
+  background: #4a1818 !important;
   backdrop-filter: blur(10px) !important;
   box-shadow: 
     0 4px 20px rgba(0, 0, 0, 0.3),
-    0 0 0 1px rgba(182, 31, 31, 0.3),
-    0 0 20px rgba(182, 31, 31, 0.2),
+    0 0 0 1px rgba(74, 24, 24, 0.3),
+    0 0 20px rgba(74, 24, 24, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.1) !important;
 }
 
@@ -186,9 +168,9 @@ body:has(.contact-page) .navbar::before {
   bottom: 0;
   background: linear-gradient(90deg, 
     transparent 0%, 
-    rgba(182, 31, 31, 0.1) 20%, 
-    rgba(182, 31, 31, 0.2) 50%, 
-    rgba(182, 31, 31, 0.1) 80%, 
+    rgba(74, 24, 24, 0.1) 20%, 
+    rgba(74, 24, 24, 0.2) 50%, 
+    rgba(74, 24, 24, 0.1) 80%, 
     transparent 100%);
   pointer-events: none;
   animation: glowPulse 3s ease-in-out infinite;
@@ -202,12 +184,10 @@ body:has(.contact-page) .navbar::before {
   transition: all 0.3s ease;
 }
 
-.logo-box:hover {
-  transform: scale(1.05);
-}
+
 
 .logo-box img {
-  height: 50px;
+  height: 70px;
   width: auto;
   object-fit: contain;
 }
@@ -232,12 +212,7 @@ body:has(.contact-page) .navbar::before {
   display: inline-block;
 }
 
-.book-btn:hover {
-  color: white !important;
-  background: linear-gradient(135deg, #8b0000 0%, #b62222 100%) !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(182, 34, 34, 0.4) !important;
-}
+
 
 
 .bg-video {
@@ -448,7 +423,7 @@ body:has(.contact-page) .navbar::before {
 }
 
 .mobile-logo img {
-  height: 40px;
+  height: 55px;
   width: auto;
 }
 
@@ -463,9 +438,7 @@ body:has(.contact-page) .navbar::before {
   transition: background 0.3s ease;
 }
 
-.close-menu-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
+
 
 .mobile-menu-links {
   flex: 1;
@@ -486,7 +459,6 @@ body:has(.contact-page) .navbar::before {
   text-align: center;
 }
 
-.mobile-menu-links a:hover,
 .mobile-menu-links a.active {
   color: #b62222;
   transform: translateX(10px);
@@ -848,15 +820,6 @@ body:has(.contact-page) .navbar::before {
 
 /* Touch Device Optimizations */
 @media (hover: none) and (pointer: coarse) {
-  .navbar-left a:hover,
-  .book-btn:hover {
-    transform: none;
-  }
-  
-  .mobile-menu-links a:hover {
-    transform: none;
-  }
-  
   .book-btn:active {
     transform: scale(0.95);
   }

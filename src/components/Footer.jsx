@@ -34,8 +34,8 @@ const Footer = () => {
         <div className="center">
         </div>
         <div className="right">
-          <Link to="/about" className="footer-link">About Us,</Link>
-          <Link to="/stay" className="footer-link">Stay,</Link>
+                  <Link to="/about" className="footer-link">The Journey,</Link>
+        <Link to="/stay" className="footer-link">Accommodation,</Link>
           <Link to="/gallery" className="footer-link">Gallery,</Link>
           <Link to="/contact" className="footer-link">Contact</Link>
           <div className="instagram-section">

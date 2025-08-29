@@ -7,10 +7,6 @@ const HotCLife = () => {
     <section className="hotc-section">
       <div className="hotc-container">
         <div className="hotc-text fade-in-left">
-          <h2>Ready to Experience Spiti?</h2>
-          <p>
-            Let's start planning your perfect mountain retreat. Reach out and we'll help you create unforgettable memories in the heart of the Himalayas.
-          </p>
           <Link to="/contact" className="hotc-btn">Get In Touch</Link>
         </div>
 
