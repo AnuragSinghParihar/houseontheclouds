@@ -202,7 +202,7 @@ const Gallery = () => {
                         <p>In the shadow of century-old monasteries like Key and Tangyud—where murals, Thangka paintings, and sacred rituals echo—our region pulses with spiritual depth. Explore the monasteries, listen to the chants, and witness festivals held in harmony with the land's rhythms.</p>
                       </div>
                       <div className="culture-image">
-                        <img src={IMG_0216} alt="Ancient Monastery in the Himalayas" className="section-image" />
+                        <img src="/images/IMG_0216.jpg" alt="Ancient Monastery in the Himalayas" className="section-image" />
                       </div>
                     </div>
                   </div>

@@ -65,24 +65,25 @@ const Stay = () => {
     setActiveSection(activeSection === sectionId ? null : sectionId);
   };
 
-  const amenities = [
-    {
-      icon: "/images/hotel.png",
-      title: "Luxury Rooms"
-    },
-    {
-      icon: "/images/view.png",
-      title: "Panoramic Views"
-    },
-    {
-      icon: "/images/living-room.png",
-      title: "Cozy Living Spaces"
-    },
-    {
-      icon: "/images/food.png",
-      title: "Local Cuisine"
-    }
-  ];
+  // Amenities data - currently not used in the component
+  // const amenities = [
+  //   {
+  //     icon: "/images/hotel.png",
+  //     title: "Luxury Rooms"
+  //   },
+  //   {
+  //     icon: "/images/view.png",
+  //     title: "Panoramic Views"
+  //   },
+  //   {
+  //     icon: "/images/living-room.png",
+  //     title: "Cozy Living Spaces"
+  //   },
+  //   {
+  //     icon: "/images/food.png",
+  //     title: "Local Cuisine"
+  //   }
+  // ];
 
   return (
     <>

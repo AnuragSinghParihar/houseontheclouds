@@ -8,7 +8,7 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = () => {
     setIsSubmitting(true);
     
     // Let the form submit naturally to Web3Forms

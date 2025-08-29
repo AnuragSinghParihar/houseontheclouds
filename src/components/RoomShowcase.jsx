@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './RoomShowcase.css';
 // Assets moved to public folder - using direct URLs
 
 const RoomShowcase = () => {
-  const [scrollY, setScrollY] = useState(0);
+  // Scroll tracking for potential future use
+  // const [scrollY, setScrollY] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setScrollY(window.scrollY);
+  //   };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll, { passive: true });
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   return (
     <section className="room-showcase">

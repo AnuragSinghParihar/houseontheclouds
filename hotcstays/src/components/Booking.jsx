@@ -75,7 +75,7 @@ const Booking = () => {
       } else {
         setSubmitStatus({ type: 'error', message: data.message || 'Booking failed. Please try again.' });
       }
-    } catch (err) {
+    } catch {
       setSubmitStatus({ type: 'error', message: 'Network error. Please try again.' });
     } finally {
       setSubmitting(false);

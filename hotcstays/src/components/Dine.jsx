@@ -4,7 +4,7 @@ import HotelVideo from '../assets/hotelvideo.mp4';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import imageone from '../assets/imageone.JPG';
-import imagefifth from '../assets/fifthimage.JPG';
+// import imagefifth from '../assets/fifthimage.JPG';
 import imagesecond from '../assets/imagesecond.JPG';
 
 const Dine = () => {
