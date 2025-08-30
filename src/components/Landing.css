@@ -140,7 +140,9 @@ body, html {
 body:has(.gallery-page) .navbar .navbar-left a,
 body:has(.gallery-page) .navbar .book-btn,
 body:has(.contact-page) .navbar .navbar-left a,
-body:has(.contact-page) .navbar .book-btn {
+body:has(.contact-page) .navbar .book-btn,
+body:has(.stay-page) .navbar .navbar-left a,
+body:has(.stay-page) .navbar .book-btn {
   color: white !important;
 }
 
@@ -148,7 +150,8 @@ body:has(.contact-page) .navbar .book-btn {
 
 /* Permanent navbar background for gallery and contact pages */
 body:has(.gallery-page) .navbar,
-body:has(.contact-page) .navbar {
+body:has(.contact-page) .navbar,
+body:has(.stay-page) .navbar {
   background: #4a1818 !important;
   backdrop-filter: blur(10px) !important;
   box-shadow: 
@@ -159,7 +162,8 @@ body:has(.contact-page) .navbar {
 }
 
 body:has(.gallery-page) .navbar::before,
-body:has(.contact-page) .navbar::before {
+body:has(.contact-page) .navbar::before,
+body:has(.stay-page) .navbar::before {
   content: '';
   position: absolute;
   top: 0;

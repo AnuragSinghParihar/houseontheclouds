@@ -86,7 +86,7 @@ const Stay = () => {
   // ];
 
   return (
-    <>
+    <div className="stay-page">
       <Navbar />
       
       {/* Hero Section */}
@@ -103,132 +103,152 @@ const Stay = () => {
             <p className="hero-description">Experience luxury at 13,615 feet in the heart of Spiti Valley</p>
           </div>
         </div>
+        <div className="accommodation-text-right">
+          <h2 className="accommodation-right-title">Accommodation</h2>
+        </div>
       </div>
 
-      {/* Room Showcase */}
-      <section className="rooms-showcase">
-        <div className="container">
-          <div className="section-header">
-            <h2>Our Rooms</h2>
-            <p>Each room is thoughtfully designed to blend traditional Spiti architecture with modern comfort</p>
-          </div>
-
-          <div className="room-grid">
-            {/* Room 1 */}
-            <div className="room-card">
-              <div className="room-image">
-                <img src="/images/94b1a1ab-d592-4a13-8877-f9358ed7605e-copy.JPG" alt="Mountain View Room" />
-                <div className="room-overlay">
-                  <span className="room-price">From ₹8,000</span>
-                </div>
-              </div>
-              <div className="room-details">
-                <h3>Mountain View Room</h3>
-                <p className="room-description">Wake up to panoramic views of snow-capped peaks and ancient monasteries. This spacious room features large windows that frame the majestic Himalayas.</p>
-                <div className="room-features">
-                  <span>King Bed</span>
-                  <span>Mountain View</span>
-                  <span>Ensuite Bathroom</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Room 2 */}
-            <div className="room-card">
-              <div className="room-image">
-                <img src="/images/6491a1ab-d592-4a13-8877-f9358ed7605e-copy.JPG" alt="Valley Suite" />
-                <div className="room-overlay">
-                  <span className="room-price">From ₹12,000</span>
-                </div>
-              </div>
-              <div className="room-details">
-                <h3>Valley Suite</h3>
-                <p className="room-description">Our most luxurious accommodation with uninterrupted views of the Spiti Valley. Features handcrafted wooden interiors and premium amenities.</p>
-                <div className="room-features">
-                  <span>King Bed</span>
-                  <span>Valley View</span>
-                  <span>Premium Amenities</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Room 3 */}
-            <div className="room-card">
-              <div className="room-image">
-                <img src="/images/3ee78e74-61ff-47dd-a0e9-715667b77fb3-copy.JPG" alt="Cloud Chamber" />
-                <div className="room-overlay">
-                  <span className="room-price">From ₹10,000</span>
-                </div>
-              </div>
-              <div className="room-details">
-                <h3>Cloud Chamber</h3>
-                <p className="room-description">An intimate retreat where luxury meets altitude. Cozy and comfortable with breathtaking views that change with every passing cloud.</p>
-                <div className="room-features">
-                  <span>Queen Bed</span>
-                  <span>Cloud Views</span>
-                  <span>Cozy Interior</span>
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Elegant Text Section */}
+      <section className="elegant-text-section">
+        <div className="elegant-text-container">
+          <h2 className="elegant-top-text">STAY WITH US</h2>
+          <div className="elegant-separator"></div>
+          <h1 className="elegant-bottom-text">Your house above the clouds at 13,500 ft</h1>
         </div>
       </section>
 
-      {/* Amenities Section */}
-      <section className="amenities-section">
-        <div className="container">
-          <div className="section-header">
-            <h2>Room Amenities</h2>
-            <p>Everything you need for a comfortable stay in the mountains</p>
-          </div>
-
-          <div className="amenities-grid">
-            <div className="amenity-item">
-              <div className="amenity-icon">🛏️</div>
-              <h3>Premium Bedding</h3>
-              <p>King-sized beds with high-quality linens and down comforters</p>
-            </div>
-            <div className="amenity-item">
-              <div className="amenity-icon">🚿</div>
-              <h3>Ensuite Bathrooms</h3>
-              <p>Private bathrooms with hot water and modern amenities</p>
-            </div>
-            <div className="amenity-item">
-              <div className="amenity-icon">🏔️</div>
-              <h3>Mountain Views</h3>
-              <p>Large windows offering panoramic views of the Himalayas</p>
-            </div>
-            <div className="amenity-item">
-              <div className="amenity-icon">🔥</div>
-              <h3>Heating</h3>
-              <p>Comfortable heating arrangements for colder months</p>
-            </div>
-            <div className="amenity-item">
-              <div className="amenity-icon">📶</div>
-              <h3>Wi-Fi</h3>
-              <p>Complimentary Wi-Fi available throughout the property</p>
-            </div>
-            <div className="amenity-item">
-              <div className="amenity-icon">🎨</div>
-              <h3>Local Decor</h3>
-              <p>Handcrafted details and locally inspired interior design</p>
-            </div>
-          </div>
+      {/* Additional Image Section */}
+      <section className="additional-room-image-section">
+        <div className="additional-room-text">
+          <p className="room-description-text">
+            A serene mountain retreat where elegance meets comfort—this room features large windows that open to breathtaking valley views, a cozy seating corner perfect for slow mornings, and warm wooden interiors that blend modern design with natural charm.
+          </p>
+        </div>
+        <div className="additional-room-image-container">
+          <img 
+            src="/images/4ee2d515-8c5a-44bf-8232-7b718e4f65ae-copy.JPG" 
+            alt="Room with Mountain View" 
+            className="additional-room-image"
+          />
         </div>
       </section>
 
-      {/* Experience Section */}
-      <section className="experience-section">
-        <div className="container">
-          <div className="experience-content">
-            <div className="experience-text">
-              <h2>Your Mountain Experience</h2>
-              <p>At House on the Clouds, every detail is crafted to create an unforgettable mountain retreat. From the moment you wake up to the golden rays painting the peaks, to the peaceful evenings under a blanket of stars, your stay will be nothing short of magical.</p>
-              <p>Our rooms are designed as sanctuaries where you can truly connect with the raw beauty of Spiti Valley. Whether you're seeking adventure or tranquility, our accommodation provides the perfect base for your Himalayan journey.</p>
-            </div>
-            <div className="experience-image">
-              <img src="/images/25343f9f-29ba-4570-8f4a-7fdb5c733ffa-copy.JPG" alt="Mountain Experience" />
-            </div>
+      {/* Third Image Section - Centered */}
+      <section className="third-image-section">
+        <div className="third-image-container">
+          <img 
+            src="/images/d18b9578-3fb0-4141-a8e3-bfa880cf93ad-copy.JPG" 
+            alt="Bedroom with Mountain Views" 
+            className="third-room-image"
+          />
+        </div>
+      </section>
+
+      {/* Fourth Image Section - Left Side */}
+      <section className="fourth-image-section">
+        <div className="fourth-image-container">
+          <img 
+            src="/images/6491a429-039e-4ab6-8360-c81ea0631878-copy.JPG" 
+            alt="Bedroom with Accent Wall" 
+            className="fourth-room-image"
+          />
+        </div>
+        <div className="fourth-room-text">
+          <p className="fourth-room-description-text">
+            Inspired by the natural palette of Spiti, this room blends earthy textures with modern elegance. The handcrafted wall design and warm accents reflect the valley's rugged beauty, while plush bedding and soft tones create a serene retreat in the heart of Chicham.
+          </p>
+        </div>
+      </section>
+
+      {/* Fifth Image Section - Right Side */}
+      <section className="fifth-image-section">
+        <div className="fifth-room-text">
+          <p className="fifth-room-description-text">
+            Experience luxury in every detail with our thoughtfully designed bathroom. Featuring modern fixtures, elegant tile work, and a window that frames the stunning mountain landscape, this space combines comfort with the breathtaking views that make House on the Clouds truly special.
+          </p>
+        </div>
+        <div className="fifth-image-container">
+          <img 
+            src="/images/4e11b3c0-a26a-4894-92e2-e821e57235f0-copy.JPG" 
+            alt="Bathroom with Mountain View" 
+            className="fifth-room-image"
+          />
+        </div>
+      </section>
+
+      {/* Features Section - Three Column Layout */}
+      <section className="features-section">
+        <div className="features-left-image">
+          <img 
+            src="/images/f76b8068-9e57-4e2f-8319-a6c15cb8cd6d.JPG" 
+            alt="Bedroom with Mountain Views" 
+            className="features-image"
+          />
+        </div>
+        
+        <div className="features-text-center">
+          <h3 className="features-title">HOUSE ON THE CLOUDS FEATURES</h3>
+          <h2 className="features-heading">During your stay you'll experience...</h2>
+          <ul className="features-list">
+            <li>King-sized beds with premium linens</li>
+            <li>Ensuite bathrooms with hot water</li>
+            <li>Locally inspired decor & handcrafted details</li>
+            <li>Panoramic mountain views</li>
+            <li>Heating arrangements for colder months</li>
+            <li>Complimentary Wi-Fi (where available)</li>
+          </ul>
+        </div>
+        
+        <div className="features-right-image">
+          <img 
+            src="/images/IMG_0452.jpg" 
+            alt="Ornate Copper Teapot" 
+            className="features-image"
+          />
+        </div>
+      </section>
+
+      {/* Full Screen Building Image */}
+      <section className="fullscreen-building-section">
+        <div className="fullscreen-building-container">
+          <img 
+            src="/images/77643edc-cc76-471b-a531-9add469e9b0e 2.jpg" 
+            alt="House on the Clouds Building" 
+            className="fullscreen-building-image"
+          />
+        </div>
+      </section>
+
+      {/* Common Area Section */}
+      <section className="common-area-section">
+        <div className="common-area-header">
+          <h2 className="common-area-title">Common Areas</h2>
+          <p className="common-area-subtitle">Spaces designed for connection and relaxation</p>
+        </div>
+        
+        <div className="common-area-images">
+          <div className="common-area-image-container">
+            <img 
+              src="/images/landing2.JPG" 
+              alt="Lounge Area with Warm Lighting" 
+              className="common-area-image"
+            />
+          </div>
+          
+          <div className="common-area-image-container">
+            <img 
+              src="/images/landing1.JPG" 
+              alt="Living Room with Mountain Views" 
+              className="common-area-image"
+            />
+          </div>
+          
+          <div className="common-area-image-container">
+            <img 
+              src="/images/IMG_0308.jpg" 
+              alt="Cozy Common Area" 
+              className="common-area-image"
+            />
           </div>
         </div>
       </section>
@@ -303,7 +323,7 @@ const Stay = () => {
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 };
 
